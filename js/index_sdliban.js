@@ -13,7 +13,7 @@ $(document).ready(function(){
 	 BUILD THE SLIDER
 	*****************/
 	//set width to be 'x' times the number of slides
-	$('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
+	$('#slider-wrap ul#slider').width(sliderWidth*5);
 	
     //next slide 	
 	$('#next').click(function(){
