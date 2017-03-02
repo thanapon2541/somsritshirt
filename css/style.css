@@ -24,7 +24,7 @@ ul,li{
 }
 .imgstick1{
 	max-width: 100%;
-    height: 100%;
+    
 }
 .imgstick2{
 	width: 100%;
@@ -55,8 +55,8 @@ ul,li{
     margin: 4px auto 0px 30px;
 }
 .menudis{display: none;}
-#slider-wrap,#slider-wrap ul#slider li{height: 460px;}
-#pagination-wrap{margin-top: 420px;}
+#slider-wrap,#slider-wrap ul#slider li{}
+#pagination-wrap{margin-top: 50%;}
 .banner-wapp{
 		width: 100%;
 		background-repeat: no-repeat;
@@ -368,9 +368,9 @@ footer{
 	.menudis{
 		margin-top: 40px;
 	}
-	.slidban{height: 650px; width: 100%;}
-	#slider-wrap,#slider-wrap ul#slider li{height:650px;}
-	#pagination-wrap{margin-top: 600px;}
+	.slidban{width: 100%;}
+	#slider-wrap,#slider-wrap ul#slider li{}
+	#pagination-wrap{margin-top: 50%}
 	.bannercontact{
 		height: 100px;
 		margin-bottom: 250px
