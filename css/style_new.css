@@ -1,0 +1,138 @@
+@media screen and (max-width:400px){
+	.educon {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media screen and (min-width:400px){
+	.educon {
+		width: 450px;
+		height: 450px;
+	}
+}
+
+@media screen and (min-width:550px){
+	.educon {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+@media screen and (min-width:1025px){
+	.educon {
+		width: 300px;
+		height: 300px;
+		margin: 3px;
+	}
+}
+
+@media screen and (min-width:1100px){
+	.educon {
+		width: 325px;
+		height: 325px;
+		margin: 5px;
+	}
+}
+
+@media screen and (min-width:1200px){
+	.educon {
+		width: 350px;
+		height: 350px;
+		margin: 10px;
+	}
+}
+
+@media screen and (min-width:1375px) {
+	.educon {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media screen and (min-width:1550px) {
+	.educon {
+		width: 450px;
+		height: 450px;
+	}
+}
+
+.c1 , .c2 , .c3 {
+	transition: 0.5s background;
+	margin:30px;
+}
+
+.c1:hover {
+	background-image: url("../im/Inav1.JPG");
+}
+
+.c2:hover {
+	background-image: url("../im/Inav2.JPG");
+}
+
+.c3:hover {
+	background-image: url("../im/Inav3.JPG");
+}
+
+/*.c1:hover {
+	background-image: url("../im/consh1h.png");
+}
+
+.c2:hover {
+	background-image: url("../im/consh2h.png");
+}
+
+.c3:hover {
+	background-image: url("../im/consh3h.png");
+}*/
+
+@media screen and (max-width:1500px){
+	.c1 , .c2 , .c3 {
+		height: 243px;
+		margin:20px;
+	}
+}
+
+@media screen and (max-width:1023px){
+	.c1 , .c2 , .c3 {
+		height: 243px;
+		margin:12px;
+	}
+}
+
+@media screen and (max-width:767px){
+	.c1 , .c2 , .c3 {
+		height: 158px;
+		margin:0px;
+	}
+}
+
+.shopviewall span {
+	height: 30px;
+	width: 175px;
+	padding: 15px;
+	margin-top: 0px;
+}
+
+.shopviewall span:hover {
+	background-color: tomato;
+}
+
+.bodypanel {
+	width: 135%;
+	margin-left: -17.5%;
+}
+
+@media screen and (max-width:1025px) {
+	.bodypanel {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.shopviewall span {
+		height: 15px;
+		width: 100px;
+		padding: 15px;
+		margin-top: 0px;
+	}
+}

@@ -188,3 +188,127 @@ ul,li{
     	margin-top: 13%;
 	}
 }
+
+@media screen and (max-width:400px){
+	.educon {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media screen and (min-width:400px){
+	.educon {
+		width: 450px;
+		height: 450px;
+	}
+}
+
+@media screen and (min-width:550px){
+	.educon {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+@media screen and (min-width:750px){
+	.educon {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+@media screen and (min-width:1225px){
+	.educon {
+		width: 400px;
+		height: 400px;
+		margin: 10px;
+	}
+}
+
+@media screen and (min-width:1375px) {
+	.educon {
+		width: 450px;
+		height: 450px;
+	}
+}
+
+@media screen and (min-width:1550px) {
+	.educon {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+.c1 , .c2 , .c3 {
+	transition: 0.5s background;
+	margin:30px;
+	width: 100%;
+	background-size:100%;
+}
+
+.c1 {
+	background-image: url("../im/B1.png");
+}
+
+.c2 {
+	background-image: url("../im/B2.png");
+}
+
+.c3 {
+	background-image: url("../im/B3.png");
+}
+
+.c1:hover {
+	background-image: url("../im/B1h.png");
+}
+
+.c2:hover {
+	background-image: url("../im/B2h.png");
+}
+
+.c3:hover {
+	background-image: url("../im/B3h.png");
+}
+
+@media screen and (max-width:1500px){
+	.c1 , .c2 , .c3 {
+		height: 243px;
+		margin:20px;
+	}
+}
+
+@media screen and (max-width:1023px){
+	.c1 , .c2 , .c3 {
+		height: 243px;
+		margin:12px;
+	}
+}
+
+@media screen and (max-width:850px){
+	.c1 , .c2 , .c3 {
+		height: 180px;
+		margin:6px;
+	}
+}
+
+@media screen and (max-width:767px){
+	.c1 , .c2 , .c3 {
+		height: 150px;
+		margin:0px;
+	}
+}
+
+@media screen and (max-width:650px){
+	.c1 , .c2 , .c3 {
+		height: 130px;
+		margin:0px;
+	}
+}
+
+@media screen and (max-width:500px){
+	.c1 , .c2 , .c3 {
+		height: 100px;
+		margin:0px;
+	}
+	
+}

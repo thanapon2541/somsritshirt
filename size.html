@@ -11,7 +11,8 @@
 		<!-- me -->
 		<meta name="viewport" type="image/x-icon" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/style_contact.css">
+		<link rel="stylesheet" type="text/css" href="css/style_edut.css">
+		<link rel="stylesheet" type="text/css" href="css/style_about.css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="css/Prompt.css">
 	</head>
@@ -83,8 +84,8 @@
 					<span class="bt1 left">หน้าแรก</span>
 				</a>
 					<span class="bt1 left">&nbsp;>&nbsp;</span>
-				<a href="contact.html">
-					<span class="bt1 abt1 left">ติดต่อสมศรี</span>
+				<a href="size.html">
+					<span class="bt1 abt1 left">ขนาดเสื้อ</span>
 				</a>
 			</div>
 			<!-- breadcrumb-wapp -->
@@ -92,23 +93,26 @@
 				<hr class="hr1">
 			</div>
 			<!-- hr -->
-			<div class="contact">
-				<span class="ct1">
-					Line
-				<a target="_blank" href="https://line.me/R/ti/p/%40diz8986o">
-					<span class="ct2 cl1">@somsritshirt</span>
-				</a>
-				</span>
-				<!-- /******** -->
-				<br>
-				<span class="ct1">
-					Facebook
-				<a target="_blank" href="https://www.facebook.com/somsritshirt/?__mref=message_bubble">
-					<span class="ct2 cl2">@somsritshirt</span>
-				</a>
-				</span>
-				<iframe id="gform" src="https://docs.google.com/forms/d/e/1FAIpQLSex5jcAryV_5sd6WAKa7jdPN7AIXSGbtsWglgyNEf5W-SHRJw/viewform?embedded=true" height="500" frameborder="0" marginheight="0" marginwidth="0">กำลังโหลด...</iframe>
+			<div class="toppig">
+				<span class="toptext">ขนาดเสื้อ</span>
 			</div>
+			<!-- toppig -->
+			<div class="bodypanel" style="padding:0" id="bodypanel">
+				<img src="im/somsrisize.jpg" id="sizeimg">
+				<script>
+					//control img size
+					function imgsize() {
+						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth;
+						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth * 0.75;
+						
+						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth;
+						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth * 0.75;
+					}
+					window.onresize = imgsize;
+					imgsize();
+				</script>
+			</div>
+
 		</div>
 		
 	</body>

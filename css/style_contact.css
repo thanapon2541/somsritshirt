@@ -1,3 +1,5 @@
+@import "menufixed.css";
+
 body{
 	 font-family: 'promptlight';	
 }
@@ -90,7 +92,23 @@ ul,li{
 .cl2{
 	margin-left: 10px;
 }
-@media screen and (min-width:375px){
+@media screen and (max-width:330px){
+	.logoim{
+		margin-left: 28px;
+	}
+	.loim {
+	   height: 137%;
+    	margin: -10px auto 0px 0px;
+		background-size: 155%;
+	}
+	.cl1 {
+    margin-left: 55px;
+	}
+	.contact {
+    	font-size: 18px;
+	}
+}
+@media screen and (min-width:400px){
 	.logoim{
 		margin-left: 28px;
 	}
@@ -165,4 +183,9 @@ ul,li{
 	.menudis{
 		margin-top: 40px;
 	}
+}
+
+#gform {
+	width:100%;
+	margin-top: 50px;
 }
