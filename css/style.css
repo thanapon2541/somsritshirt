@@ -259,9 +259,9 @@ footer{
 	.shopt1 {
     	margin-left: 44px;
 	}
-	footer {
+	/*footer {
     	font-size: 1.2em;
-	}
+	}*/
 	.con1 {
     	background-size: 155%;
 	}
@@ -346,10 +346,10 @@ footer{
 	.con1 {
     	background-size: 127%;
 	}
-	footer {
+	/*footer {
     	font-size: 1.2em;
     	line-height: 56px;
-	}
+	}*/
 }
 @media screen and (min-width:1024px) {
 	.wappp{
@@ -457,8 +457,8 @@ footer{
 	    background-size: 100%;
 	}
 	footer{
-	    height: 80px;
-	    line-height: 83px;
-	    font-size: 1.750em;
+	    height: 40px;
+	    line-height: 40px;
+	    font-size: 1em;
 	}
 }
