@@ -90,6 +90,9 @@ ul,li{
 .cl2{
 	margin-left: 10px;
 }
+.cl3 {
+	margin-left: 88px;
+}
 @media screen and (min-width:375px){
 	.logoim{
 		margin-left: 28px;
@@ -101,6 +104,9 @@ ul,li{
 	}
 	.cl1 {
     margin-left: 88px;
+	}
+	.cl3 {
+    	margin-left: 108px;
 	}
 	.contact {
     	font-size: 30px;
@@ -144,6 +150,9 @@ ul,li{
 	}
 	.cl1 {
     margin-left: 116px;
+	}
+	.cl3{
+		margin-left: 150px;
 	}
 }
 @media screen and (min-width:1024px) {

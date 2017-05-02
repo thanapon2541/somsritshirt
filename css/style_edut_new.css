@@ -1,4 +1,5 @@
 @import url("../font/pridi.css");
+@import url("../font/freesia.css");
 
 .bodypanel {
 	/*margin-left: 10px;
@@ -164,4 +165,14 @@
 		width: 500px;
 		height: 500px;
 	}
+}
+
+.aboutbodypanel {
+	font-family: freesia;
+	font-size:20px;
+	margin-left: 10px;
+    margin-right: 10px;
+	background-color: rgb(217,217,217);
+	padding: 10px;
+	overflow: hidden;
 }
