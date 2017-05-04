@@ -126,7 +126,7 @@
 	margin-left: 73px;
 }
 .cl2{
-	margin-left: 10px;
+	margin-left: 22px;
 }
 .cl3 {
 	margin-left: 88px;
@@ -136,7 +136,10 @@
 	text-align:center;
 	margin-top: 40px;
 }
-@media screen and (min-width:375px){
+.contact {
+	font-size:20px;
+}
+@media screen and (min-width:425px){
 	.logoim{
 		margin-left: 28px;
 	}
@@ -147,6 +150,9 @@
 	}
 	.cl1 {
     margin-left: 88px;
+	}
+	.cl2{
+		margin-left: 10px;
 	}
 	.cl3 {
     	margin-left: 108px;
