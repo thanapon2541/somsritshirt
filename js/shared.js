@@ -19,11 +19,13 @@ function stopfade() {
   $("#fader").animate({opacity:0},500,function() {
     $("#fader").css("display","none");
   });
+  console.log("Stop fade");
 }
 
 function startfade() {
   $("body").append('<link rel="stylesheet" href="/css/fade.css">');
   $("body").append('<div id="fader"></div>');
+  console.log("Start fade");
 }
 
 $(document).ready(function() { //don't change
@@ -54,17 +56,19 @@ function changepage(href,nopushstate) {
   console.log("Change page : "+href);
   if (isPathAbsolute(href)) {
     window.location = href;
+    return;
   }
   if (!nopushstate) window.history.pushState(href, "", href);
+  $("html").html("");
+  console.log("Code deleted but continue to run");
+  $("html,body").css("width","100%");
+  $("html,body").css("height","100%");
+  $("html,body").css("margin","0");
+  $("html,body").css("overflow","hidden");
+  startfade();
   $.get(href,function(data) {
-    $("html").html("");
-    console.log("Code deleted but continue to run");
-    $("html,body").css("width","100%");
-    $("html,body").css("height","100%");
-    $("html,body").css("margin","0");
-    $("html,body").css("overflow","hidden");
-    $("body").html('<iframe id="main" src='+href+' style="border:none;width:100%;height:100%;"></iframe>');
-    startfade();
+    console.log("New page source code loaded");
+    $("body").append('<iframe id="main" src='+href+' style="border:none;width:100%;height:100%;"></iframe>');
   })
 }
 
