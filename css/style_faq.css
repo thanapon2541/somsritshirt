@@ -33,7 +33,7 @@
 	font-family: Freesia;
 }
 
-.bodypanel2 .bodyheading {
+.bodyheading {
 	background-color: whitesmoke;
 	text-align: center;
 	padding: 15px;
@@ -42,7 +42,7 @@
 	box-sizing: border-box;
 }
 
-.bodypanel2 .bodybody {
+.bodybody {
 	background-color: gainsboro;
 	padding: 15px;
 	padding-left: 30px;
@@ -64,7 +64,7 @@
 	flex-direction: row-reverse;
 }
 
-.bodypanel2 .bodyflex .bodytext {
+.bodytext {
 	width: 100%;
 	line-height: 35px;
 }
@@ -75,6 +75,19 @@
 
 .bodypanel2 .bodyflex.reverse img {
 	margin-left: 30px;
+}
+
+@media screen and (max-width:768px){
+	
+	.bodytext {
+		font-size: 22px;
+		line-height: 25px;
+	}
+	
+	.bodyheading {
+		font-size:28px;
+		padding:10px;
+	}
 }
 
 @media screen and (max-width:500px){

@@ -1,12 +1,18 @@
 //current position
 var pos = 0;
+
 //number of slides
 var totalSlides = $('#slider-wrap ul li').length;
 //get the slide width
 var sliderWidth = $('#slider-wrap').width();
 
-
-$(document).ready(function(){
+function sdliban_update(){
+	
+	//current position
+	//pos = 0;
+	
+	//get the slide width
+	sliderWidth = $('#slider-wrap').width();
 	
 	
 	/*****************
@@ -15,6 +21,18 @@ $(document).ready(function(){
 	//set width to be 'x' times the number of slides
 	$('#slider-wrap ul#slider').width(sliderWidth*5);
 	
+	slideLeft();
+	slideRight();
+	
+	//console.log("aaa");
+	
+	//DOCUMENT READY , RESIZE
+
+}
+
+
+$(document).ready(sdliban_update);
+$(document).ready(function() {
     //next slide 	
 	$('#next').click(function(){
 		slideRight();
@@ -24,8 +42,6 @@ $(document).ready(function(){
 	$('#previous').click(function(){
 		slideLeft();
 	});
-	
-	
 	
 	/*************************
 	 //*> OPTIONAL SETTINGS
@@ -56,10 +72,9 @@ $(document).ready(function(){
 	  function(){ $(this).addClass('active'); clearInterval(autoSlider); }, 
 	  function(){ $(this).removeClass('active'); autoSlider = setInterval(slideRight, 4800); }
 	);
-	
-	
+})
 
-});//DOCUMENT READY
+$(window).resize(sdliban_update);
 	
 
 

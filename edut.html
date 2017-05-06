@@ -4,6 +4,7 @@
 		<title>สมศรีมีเสื้อ</title>
 		<meta charset="utf-8">
 		<meta name="keywords" content="สมศรี,สมศรีมีเสื้อ,รับผลิตเสื้อยืด,รับผลิตเสื้อ,สกรีนเสื้อ,ทำเสื้อ,เสื้อพนักงาน,เสื้อค่าย,เสื้อกิจกรรม">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="shortcut icon" href="im/som-logo.ico">
 		<!-- css -->
 		<link rel="stylesheet" href="css/normalize.min.css">
@@ -54,7 +55,7 @@
 					</div>
 					<!-- menum -->
 				<div class="logoim left">
-					<a href="index2.html"><img class="loim" src="im/somlogobeta.png"></a>
+					<a href="index.html"><img class="loim" src="im/somlogobeta.png"></a>
 				</div>
 				<nav class="menudis right">
 					<ul class="meundis_ul">
@@ -85,7 +86,7 @@
 		<div class="wappp">
 			<div class="topblur">
 				<div class="breadcrumb-wapp clearfix">
-					<a href="index2.html">
+					<a href="index.html">
 						<span class="bt1 left">หน้าแรก</span>
 					</a>
 						<span class="bt1 left">&nbsp;>&nbsp;</span>
@@ -271,6 +272,11 @@
 						$(".topblur").css("filter","blur(5px)");
 						$(".educon").css("filter","blur(5px)");
 						$(".aboutbodypanel").css("filter","blur(5px)");
+						
+						/*$(".menu-wapp").css("-webkit-filter","blur(5px)");
+						$(".topblur").css("-webkit-filter","blur(5px)");
+						$(".educon").css("-webkit-filter","blur(5px)");
+						$(".aboutbodypanel").css("-webkit-filter","blur(5px)");*/
 					}
 					
 					function unblurall() {
@@ -278,12 +284,18 @@
 						$(".topblur").css("filter","");
 						$(".educon").css("filter","");
 						$(".aboutbodypanel").css("filter","");
+						
+						/*$(".menu-wapp").css("-webkit-filter","");
+						$(".topblur").css("-webkit-filter","");
+						$(".educon").css("-webkit-filter","");
+						$(".aboutbodypanel").css("-webkit-filter","");*/
 					}
 				
 					function untoggledetail($ele) {
 						unblurall();
 						var $sidemodal = $ele.find(".edumodal.active");
 						$ele.find(".eduimg").css("filter","");
+						//$ele.find(".eduimg").css("-webkit-filter","");
 						$ele.find(".edumodal").css("opacity","0");
 						$ele.find(".edumodal").css("display","none");
 						$ele.removeClass("showing");
@@ -294,6 +306,7 @@
 						}
 						$sidemodal.appendTo($side).removeClass("active");
 						$side.find(".eduimg").css("filter","");
+						//$side.find(".eduimg").css("-webkit-filter","");
 						$side.find(".edumodal").css("opacity","0");
 						$side.find(".edumodal").css("display","none");
 						$side.removeClass("showing");
@@ -322,6 +335,7 @@
 							$ele.css("filter","");
 							$side.css("filter","");
 							$side.find(".eduimg").css("filter","blur(5px)");
+							//$side.find(".eduimg").css("-webkit-filter","blur(5px)");
 							$side.find(".edumodal.active").css("display","block");
 							$side.find(".edumodal.active").css("opacity","0");
 							$side.addClass("showing");
@@ -330,6 +344,7 @@
 						} else {
 							$ele.css("filter","");
 							$ele.find(".eduimg").css("filter","blur(5px)");
+							//$side.find(".eduimg").css("-webkit-filter","blur(5px)");
 							$ele.find(".edumodal").css("display","block");
 							$ele.find(".edumodal").css("opacity","0");
 							$ele.addClass("showing");

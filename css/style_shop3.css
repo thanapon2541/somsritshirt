@@ -90,6 +90,7 @@
 	z-index: 51;
 	
 	padding-top: 150px;
+	overflow: hidden;
 }
 
 .grayflex {
@@ -165,6 +166,14 @@
 	}
 	.grayleft {
 		width:150px;
+	}
+	.com1text {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.com2text {
+		font-size: 24px;
+		line-height: 35px;
 	}
 }
 @media screen and (max-width:600px){
@@ -260,4 +269,37 @@
     	line-height: 46px;
 	}
 	
+}
+
+@media screen and (max-height:624px) {
+	.grayleft {
+		width: 150px;
+	}
+	.com1text {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.com2text {
+		font-size: 24px;
+		line-height: 35px;
+	}
+	.whitecom2textcontainer {
+		margin-top: 40px;
+	}
+	.contact {
+		font-size:30px;
+		line-height: 35px;
+	}
+	.cl1 {
+    margin-left: 88px;
+	}
+	.cl2{
+		margin-left: 10px;
+	}
+	.cl3 {
+    	margin-left: 108px;
+	}
+	.graybody {
+		position: absolute;
+	}
 }

@@ -11,6 +11,7 @@
     text-align: center;
     line-height: 40px;
     opacity: 0;
+    /*pointer-events: none;*/
 }
 
 .scroll_top:hover {
