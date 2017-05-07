@@ -67,6 +67,7 @@
 .bodytext {
 	width: 100%;
 	line-height: 35px;
+	text-align: justify;
 }
 
 .bodypanel2 .bodyflex.direct img {
