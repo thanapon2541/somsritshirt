@@ -1,8 +1,15 @@
-@media screen and (max-width:1000px){
-    .bodyflex {
-        flex-direction: column !important;
-        align-items: center;
-    }
+.bodypanel2.sub {
+    margin-top: 10px;
+    border: solid 2px #555;
+}
+
+.bodypanel2.sub .bodyheading {
+    font-size: 24pt;
+    padding:8px;
+}
+
+.bodypanel2.sub .bodybody {
+    padding:20px;
 }
 
 .aboutbodypanel {
@@ -13,4 +20,22 @@
 	background-color: rgb(217,217,217);
 	padding: 10px;
 	overflow: hidden;
+}
+
+.bodypanel2 {
+    margin-top: 0;
+}
+
+@media screen and (max-width:1000px){
+    .bodyflex {
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:768px){
+    .bodypanel2.sub .bodyheading {
+        font-size: 24px;
+        padding:5px;
+    }
 }
