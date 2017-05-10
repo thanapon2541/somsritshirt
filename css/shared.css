@@ -26,3 +26,23 @@
     background-size: cover;
     margin:15px;
 }
+
+/* footer (green copyright bar) */
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+    footer {
+        height: 40px;
+        line-height: 40px;
+        font-size: 1em;
+    }
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 36px;
+    overflow: hidden;
+    font-size: 1em;
+    background-color: #56b949;
+    margin-top: 30px;
+}
