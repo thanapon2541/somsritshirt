@@ -14,12 +14,23 @@
 
 .aboutbodypanel {
 	font-family: freesia;
-	font-size:20px;
+	font-size:18pt;
 	margin-left: 10px;
     margin-right: 10px;
 	background-color: rgb(217,217,217);
 	padding: 10px;
 	overflow: hidden;
+	text-align: justify;
+	
+}
+
+.aboutbodypanel img {
+    width:50%;
+}
+
+.aboutbodypanel p {
+    margin-bottom: 10px;
+    line-height: 30px;
 }
 
 .bodypanel2 {
@@ -37,5 +48,18 @@
     .bodypanel2.sub .bodyheading {
         font-size: 24px;
         padding:5px;
+    }
+    
+    .aboutbodypanel {
+        font-size: 16pt;
+    }
+    
+    .aboutbodypanel img {
+        width: 60%;
+    }
+    
+    .aboutbodypanel p {
+        margin-bottom: 7px;
+        line-height: 25px;
     }
 }
