@@ -239,7 +239,7 @@ ul,li{
 	}
 }
 
-.c1 , .c2 , .c3 , .c4 {
+.c1 , .c2 , .c3 , .c4 , .c4 {
 	transition: 0.5s background;
 	margin:30px;
 	width: 100%;
@@ -280,42 +280,42 @@ ul,li{
 }
 
 @media screen and (max-width:1500px){
-	.c1 , .c2 , .c3 {
+	.c1 , .c2 , .c3 , .c4 {
 		height: 243px;
 		margin:20px;
 	}
 }
 
 @media screen and (max-width:1023px){
-	.c1 , .c2 , .c3 {
+	.c1 , .c2 , .c3 , .c4 {
 		height: 243px;
 		margin:12px;
 	}
 }
 
 @media screen and (max-width:850px){
-	.c1 , .c2 , .c3 {
+	.c1 , .c2 , .c3 , .c4 {
 		height: 180px;
 		margin:6px;
 	}
 }
 
 @media screen and (max-width:767px){
-	.c1 , .c2 , .c3 {
+	.c1 , .c2 , .c3 , .c4 {
 		height: 150px;
 		margin:0px;
 	}
 }
 
 @media screen and (max-width:650px){
-	.c1 , .c2 , .c3 {
+	.c1 , .c2 , .c3 , .c4 {
 		height: 130px;
 		margin:0px;
 	}
 }
 
 @media screen and (max-width:500px){
-	.c1 , .c2 , .c3 {
+	.c1 , .c2 , .c3 , .c4 {
 		height: 100px;
 		margin:0px;
 	}

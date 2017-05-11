@@ -118,7 +118,7 @@
 	}
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
 	.c1 , .c2 , .c3 {
 		height: 158px;
 		margin:0px;
@@ -152,5 +152,28 @@
 		width: 100px;
 		padding: 15px;
 		margin-top: 0px;
+	}
+}
+
+.shopheadflex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.shopviewall span {
+	margin-left: -205px;
+}
+
+@media screen and (max-width:1025px) {
+	.shopviewall span {
+		margin-left: -130px;
+	}
+	
+	.shopviewall .shopt1 {
+		padding:10px;
+	}
+	
+	.shopviewall .shophead {
+		margin-top: 8px;
 	}
 }
