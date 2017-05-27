@@ -23,6 +23,12 @@
 		height: 308px;
 		margin-right: 30px;
 	}
+	
+	.bodypanel.noflexrow .aboutimg {
+		width: 50%;
+		height: auto;
+		margin-right: 0px;
+	}
 }
 
 @media screen and (max-width:768px){
@@ -44,6 +50,12 @@
 	.bodypanel .imgpos {
 		text-align: center;
 	}
+	
+	.bodypanel.noflexrow .aboutimg {
+		width: 50%;
+		height: auto;
+		margin-right: 0px;
+	}
 }
 
 .bodypanel {
@@ -56,4 +68,12 @@
 
 .toppig.next {
 	margin-top: 40px;
+}
+
+.bodypanel.noflexrow {
+	flex-direction: column;
+}
+
+.bodypanel.noflexrow .imgpos {
+	text-align: center;
 }
