@@ -111,16 +111,16 @@
 				<span class="toptext">ขนาดเสื้อ</span>
 			</div>
 			<!-- toppig -->
-			<div class="bodypanel" style="padding:0" id="bodypanel">
-				<img src="im/somsrisize.jpg" id="sizeimg">
+			<div class="bodypanel" style="padding:0;text-align:center;" id="bodypanel">
+				<div style="width:100%"><img src="im/somsrisize.jpg" id="sizeimg"></div>
 				<script>
 					//control img size
 					function imgsize() {
-						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth;
-						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth * 0.75;
+						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth*0.75;
+						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth*0.75 * 0.75;
 						
-						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth;
-						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth * 0.75;
+						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth*0.75;
+						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth*0.75 * 0.75;
 					}
 					window.onresize = imgsize;
 					imgsize();
