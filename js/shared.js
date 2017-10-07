@@ -58,7 +58,7 @@ function changepage(href,nopushstate) {
     window.location = href;
     return;
   }
-  if (!nopushstate) window.history.pushState(href, "", href);
+  if (!nopushstate) { window.history.pushState(href, "", href); console.log("Push state: "+href); }
   $("html").html("");
   console.log("Code deleted but continue to run");
   $("html,body").css("width","100%");
@@ -75,6 +75,9 @@ function changepage(href,nopushstate) {
 $(document).ready(function() { //don't change
   if (window.parent!=window) {
     window.parent.document.title = document.title;
+  } else {
+    var href = window.location.pathname;
+    window.history.pushState(href, "", href); console.log("Push state: "+href);
   }
 });
 
