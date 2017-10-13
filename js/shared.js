@@ -95,3 +95,17 @@ $(document).ready(function() {
     changepage($(this).attr("href"));
   });
 });
+
+
+
+
+//disable edut
+$(document).ready(function() {
+  console.log("aaa");
+  $(".nav-items li").each(function() {
+    if ($(this).find("a").html()=="EduT-") $(this).remove();
+  });
+  $(".meundis_ul .dr").each(function() {
+    if ($(this).find("li").html()=="EduT-") $(this).remove();
+  });
+});
