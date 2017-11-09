@@ -1,15 +1,17 @@
+//require <script src='js/underscore.min.js'></script>
+
 Vue.component('homepage-share',{
     template: `
         <div style="position:relative; overflow:hidden;">
             <div class="homepage-share">
         		<ul>
         		    <template v-for="xxx in 2">
-               			<li v-for="(img,index) in data">
+               			<li v-for="(img,index) in _.zip(data,datahover)">
                			    <template v-if="index>=5">
-               			        <img-lazy :src="img">
+               			        <img-hover :src="img[0]" :srchover="img[1]" :lazy="true">
                			    </template>
                			    <template v-else>
-               			        <img :src="img">
+               			        <img-hover :src="img[0]" :srchover="img[1]">
                			    </template>
                			</li>
            			</template>
@@ -17,7 +19,7 @@ Vue.component('homepage-share',{
             </div>
         </div>
     `,
-    props: ['data','offset'],
+    props: ['data','datahover','offset'],
     mounted: function() { setTimeout(()=> {
         if (!this.offset) this.offset = 0;
         this.offset = parseInt(this.offset);
@@ -55,7 +57,7 @@ Vue.component('homepage-share',{
                 this.pos++;
                 //console.log(this.pos);
                 //if (-((parseInt(left)-this.offset)/jump)==this.data.length) {
-                if (this.pos>this.data.length) {
+                if (this.pos>=this.data.length) {
                     el.css("left",this.offset);
                     //console.log(this.offset);
                     this.pos = 0;
@@ -64,7 +66,7 @@ Vue.component('homepage-share',{
         },
         rearrange: function(el) {
             //console.log("aaa");
-            el.css("left",-(this.offset+(el.find("li").width()+30)*this.pos));
+            el.css("left",-((el.find("li").width()+30)*this.pos)+this.offset);
         }
     }
 });
