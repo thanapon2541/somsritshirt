@@ -236,6 +236,14 @@
 					<img-hover src="im/G2.jpg" srchover="im/G2h.jpg"></img-hover>
 					<img-hover src="im/G3.jpg" srchover="im/G3h.jpg"></img-hover>
 				</div>
+				<script>
+					setInterval(() => {
+						$("#garuntee .garuntee-flex img").each(function() {
+							$(this).css("width",$(window).width()*0.3);
+							//$(this).css("height",$(window).height*0.3);
+						});
+					},100);
+				</script>
 			</div>
 			<center><div class=""><img width="90%" src="im/W1.png"></div>
 			<img src="im/W1b.png"></center>
