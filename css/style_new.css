@@ -219,6 +219,16 @@
 	margin-top: 60px;
 }
 
+#garuntee .garuntee-flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+#garuntee .garuntee-flex img {
+	width: 450px;
+	height: 450px;
+}
+
 @media screen and (max-width:768px){
 	.titleimg img {
 		height: 100px;

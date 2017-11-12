@@ -26,6 +26,10 @@ Vue.component('img-hover',{
             //preload hover image
             $("<img />").attr("src", this.srchover);
         });
+        setInterval(()=> {
+            $(this.$el).width($(this.$el).find("img").width());
+            $(this.$el).height($(this.$el).find("img").height());
+        },100);
     },10); },
     methods: {
         update: function(src) {
