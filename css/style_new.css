@@ -228,6 +228,51 @@
 	width: 450px;
 }
 
+#feedback {
+	display: flex;
+	justify-content: space-between;
+}
+
+#feedback .feedback-wrap {
+	position: relative;
+	perspective: 1000;
+	-webkit-perspective: 1000;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	pointer-event: none;
+}
+
+#feedback .feedback-wrap .feedback-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.5s;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	pointer-event: none;
+}
+
+#feedback .feedback-left {
+	background-image: url("../im/Rleft.jpg");
+	margin-left: 20px;
+}
+
+#feedback .feedback-right {
+	background-image: url("../im/Rright.jpg");
+	margin-right: 20px;
+}
+
+#feedback .feedback-left, #feedback .feedback-right {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 50px;
+}
+
+#feedback .feedback-left:hover , #feedback .feedback-right:hover {
+	cursor: pointer;
+}
+
 @media screen and (max-width:768px){
 	.titleimg img {
 		height: 100px;

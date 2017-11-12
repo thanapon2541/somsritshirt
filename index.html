@@ -198,7 +198,7 @@
 			</div>
 		
 			<div class="titleimg"><img src="im/somjai.png"></div>
-				<div id="slider-wrap">
+				<!--<div id="slider-wrap">
 	      	  					<ul id="slider">
 	          	 					<li>
 	          	 						<img src="im/R1.jpg" class="imgstick1">
@@ -228,7 +228,50 @@
 						            </ul>
 					          	</div>
 					          	 
-	                 		</div>
+	                 		</div>-->
+	      	<div id="feedback" class="">
+	      		<div class="feedback-left" onclick="feedback_pos=(feedback_pos>0?feedback_pos-1:0)"></div>
+	      		<div class="feedback-wrap">
+	      			<img class="feedback-child feedback-child1" src="im/R1.jpg">
+	      			<img class="feedback-child feedback-child2" src="im/R2.jpg">
+	      			<img class="feedback-child feedback-child3" src="im/R3.jpg">
+	      			<img class="feedback-child feedback-child4" src="im/R4.jpg">
+	      		</div>
+	      		<div class="feedback-right" onclick="feedback_pos=(feedback_pos<3?feedback_pos+1:3)"></div>
+				<script>
+					var feedback_pos = 0;
+					setInterval(() => {
+						$("#feedback .feedback-wrap img").each(function(index) {
+							$(this).css("width",$(window).width()*0.5);
+							
+							var xtrans = $(window).width()*0.15;
+							
+							if (index-feedback_pos==1) { //right
+								$(this).css("transform","translateX("+xtrans+"px) translateZ(-150px)");
+								$(this).css("opacity",0.5);
+							} else if (feedback_pos-index==1) {
+								$(this).css("transform","translateX(-"+xtrans+"px) translateZ(-150px)");
+								$(this).css("opacity",0.5);
+							} else if (index==feedback_pos) {
+								$(this).css("transform","");
+								$(this).css("opacity",1);
+							} else {
+								$(this).css("opacity",0);
+							}
+							
+							if (index==feedback_pos) {
+								$(this).css("z-index",99);
+							} else {
+								$(this).css("z-index",2);
+							}
+							//console.log(index);
+						});
+						$("#feedback .feedback-wrap").width($(".feedback-child").width());
+						$("#feedback .feedback-wrap").height($(".feedback-child").height());
+						
+					},100);
+				</script>
+	      	</div>
 	
 			<div id="garuntee" class="clearfix">
 				<div class="garuntee-flex">
@@ -237,6 +280,7 @@
 					<img-hover src="im/G3.jpg" srchover="im/G3h.jpg"></img-hover>
 				</div>
 				<script>
+					
 					setInterval(() => {
 						$("#garuntee .garuntee-flex img").each(function() {
 							$(this).css("width",$(window).width()*0.3);
