@@ -32,7 +32,7 @@ function sdliban_update(){
 
 
 $(document).ready(sdliban_update);
-$(document).ready(function() {
+$(window).on("load",function() {
     //next slide 	
 	$('#next').click(function(){
 		slideRight();
