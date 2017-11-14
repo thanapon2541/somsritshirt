@@ -1,8 +1,8 @@
 Vue.component('img-lazy',{
     template: `
-        <img :data-src="src" :class="class">
+        <img :data-src="src">
     `,
-    props: ['src','class'],
+    props: ['src'],
     mounted: function() { setTimeout(()=> {
         $(window).on("load",()=> {
             //console.log(this.$el);
