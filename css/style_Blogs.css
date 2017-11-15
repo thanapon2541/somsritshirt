@@ -247,60 +247,60 @@ ul,li{
 }
 
 .c1 {
-	background-image: url("../im/B1.png");
+	background-image: url("../im/B1.jpg");
 }
 
 .c2 {
-	background-image: url("../im/B2.png");
+	background-image: url("../im/B2.jpg");
 }
 
 .c3 {
-	background-image: url("../im/B3.png");
+	background-image: url("../im/B3.jpg");
 }
 
 .c4 {
-	background-image: url("../im/B4.png");
+	background-image: url("../im/B4.jpg");
 }
 
 .c5 {
-	background-image: url("../im/B5.png");
+	background-image: url("../im/B5.jpg");
 }
 
 .c6 {
-	background-image: url("../im/B6.png");
+	background-image: url("../im/B6.jpg");
 }
 
 .c7 {
-	background-image: url("../im/B7.png");
+	background-image: url("../im/B7.jpg");
 }
 
 
 .c1:hover {
-	background-image: url("../im/B1h.png");
+	background-image: url("../im/B1h.jpg");
 }
 
 .c2:hover {
-	background-image: url("../im/B2h.png");
+	background-image: url("../im/B2h.jpg");
 }
 
 .c3:hover {
-	background-image: url("../im/B3h.png");
+	background-image: url("../im/B3h.jpg");
 }
 
 .c4:hover {
-	background-image: url("../im/B4h.png");
+	background-image: url("../im/B4h.jpg");
 }
 
 .c5:hover {
-	background-image: url("../im/B5h.png");
+	background-image: url("../im/B5h.jpg");
 }
 
 .c6:hover {
-	background-image: url("../im/B6h.png");
+	background-image: url("../im/B6h.jpg");
 }
 
 .c7:hover {
-	background-image: url("../im/B7h.png");
+	background-image: url("../im/B7h.jpg");
 }
 
 @media screen and (max-width:1500px){

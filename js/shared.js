@@ -1,3 +1,18 @@
+//Old browser not supported
+$(document).ready(function() {
+  function getAndroidVersion(ua) {
+      ua = (ua || navigator.userAgent).toLowerCase(); 
+      var match = ua.match(/android\s([0-9\.]*)/);
+      return match ? match[1] : false;
+  };
+  var nua = navigator.userAgent;
+  var isoldandroid = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 &&     nua.indexOf('AppleWebKit') > -1) && (!(nua.indexOf('Chrome') > -1) || parseFloat(getAndroidVersion(nua))<5));
+  if (isoldandroid) {
+    alert("Browser ของคุณอาจไม่รองรับการแสดงผลหน้าเว็บ แนะนำให้คุณเปลี่ยนไปใช้ Google Chrome");
+  }
+  //alert(navigator.userAgent);
+});
+
 // Scroll top 
 $(document).on('click','.scroll_top',function(){
   $('body,html').animate({scrollTop:0},400);
