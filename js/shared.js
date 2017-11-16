@@ -5,10 +5,18 @@ $(document).ready(function() {
       var match = ua.match(/android\s([0-9\.]*)/);
       return match ? match[1] : false;
   };
+  function getChromeVersion () {     
+      var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+  
+      return raw ? parseInt(raw[2], 10) : false;
+  }
   var nua = navigator.userAgent;
-  var isoldandroid = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 &&     nua.indexOf('AppleWebKit') > -1) && (!(nua.indexOf('Chrome') > -1) || parseFloat(getAndroidVersion(nua))<5));
+  var isoldandroid = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1) && (!(nua.indexOf('Chrome') > -1) || parseFloat(getAndroidVersion(nua))<5));
+  if (nua.indexOf('Chrome') > -1 && getChromeVersion()>=40) {
+    isoldandroid = false;
+  }
   if (isoldandroid) {
-    alert("Browser ของคุณอาจไม่รองรับการแสดงผลหน้าเว็บ แนะนำให้คุณเปลี่ยนไปใช้ Google Chrome");
+    alert("Browser ของคุณอาจไม่รองรับการแสดงผลหน้าเว็บ แนะนำให้คุณเปลี่ยนไปใช้ Google Chrome เวอร์ชั่นล่าสุด");
   }
   //alert(navigator.userAgent);
 });
