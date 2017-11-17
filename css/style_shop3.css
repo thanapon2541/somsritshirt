@@ -16,6 +16,7 @@
 
 .panelbody {
 	margin-top:10px;
+	display: flex;
 }
 
 .selectdiv {
@@ -60,12 +61,19 @@
 .colorcircle {
 	height:75px;
 	width:75px;
-	margin-right:50px;
-	margin-top: 50px;
+	margin-right:25px;
+	margin-top: 25px;
 	
 	border-radius:50%;
 	text-align: center;
 	line-height: 75px;
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.colorcircle:hover {
+	cursor: pointer;
 }
 
 .graymodal {
@@ -302,4 +310,9 @@
 	.graybody {
 		position: absolute;
 	}
+}
+
+#maincanvas {
+	width: 100%;
+	height: 500px;
 }

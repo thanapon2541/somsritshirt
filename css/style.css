@@ -462,3 +462,7 @@ footer{
 	    font-size: 1em;
 	}
 }
+
+.menudis.right {
+	width: 300px;
+}
