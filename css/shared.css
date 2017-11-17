@@ -46,3 +46,7 @@ footer {
     background-color: #30499b;
     margin-top: 30px;
 }
+
+.menudis.right {
+	width: 300px;
+}
