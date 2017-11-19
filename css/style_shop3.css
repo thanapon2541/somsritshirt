@@ -8,14 +8,14 @@
 .panelhead {
 	width:100%;
 	background-color: rgb(48,73,155);
-	height: 30px;
+	height: 55px;
 	color: white;
 	font-size: 20pt;
 	padding: 15px;
 }
 
 .panelbody {
-	margin-top:10px;
+	margin-top:20px;
 	display: flex;
 }
 
@@ -28,7 +28,7 @@
 
 .selectdiv .selectstyle {
 	width: 100%;
-	height: 35px;
+	height: 40px;
 	margin-right: 40px;
 	/*background-color: yellow;*/
 	background-image: url("../im/selectarrow.jpg");
@@ -50,6 +50,7 @@
 	border:none;
 	
 	font-family: freesia;
+	font-size: 17pt;
 }
 
 .colordiv {
@@ -312,7 +313,51 @@
 	}
 }
 
-#maincanvas {
-	width: 100%;
-	height: 500px;
+.bootstrap.nav {
+	margin-top: 0px;
+}
+
+.bootstrap.nav .nav-item a {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14pt;
+}
+
+#paneltab {
+	margin-bottom: 15px;
+}
+
+#canvas-wrap {
+	width: 500px;
+}
+
+#control-wrap {
+	width: calc(100% - 500px);
+}
+
+#text-tab-input , #img-tab-input {
+	margin-top: 15px;
+	margin-bottom:15px;
+}
+
+#text-tab-color {
+	width: 50px;
+	height: 40px;
+	display: inline;
+}
+
+#text-tab-color:hover {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+	.wappp {
+		width:93%;
+	}
+}
+
+@media screen and (max-width: 1034px) {
+	.wappp {
+		width:100%;
+	}
 }

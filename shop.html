@@ -11,6 +11,11 @@
 		<meta property="og:description" content="สมศรีมีเสื้อ รับออกแบบ สกรีน และผลิตเสื้อทุกประเภทในราคาย่อมเยา สนับสนุนนักเรียนนักศึกษาโดยให้ส่วนลดพิเศษ เมื่อแสดงบัตรประจำตัวและราคาสำหรับบุคคลทั่วไปที่เหมาะสมและคู่ควรกับราคา" />
 		<meta property="og:title" content="สมศรีมีเสื้อ - รับผลิต สกรีน และออกแบบเสื้อ"/>
 		<meta property="og:image" content="http://somsritshirt.com/im/som_sb2.jpg"/>
+		
+		<script src='js/jquery.min.js'></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
+		
 		<!-- css -->
 		<link rel="stylesheet" href="css/normalize.min.css">
     	<link rel="stylesheet" href="css/style_tgm.css">
@@ -25,9 +30,10 @@
 		<link rel="stylesheet" type="text/css" href="css/menufixed.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.20/fabric.min.js"></script>
-		<script src='js/jquery.min.js'></script>
 		<script src="js/shared.js"></script>
 		<link rel="stylesheet" href="css/shared.css">
+		
+
 	</head>
 	<body>
 		<div id="vue-wrap">
@@ -99,12 +105,12 @@
 					</a>
 						<span class="bt1 left">&nbsp;>&nbsp;</span>
 					<a href="shop.html">
-						<span class="bt1 left">สั่งทำเสื้อ</span>
+						<span class="bt1 abt1 left">สั่งทำเสื้อ</span>
 					</a>
-						<span class="bt1 left">&nbsp;>&nbsp;</span>
+					<!--	<span class="bt1 left">&nbsp;>&nbsp;</span>
 					<a href="shop3.html">
 						<span class="bt1 abt1 left">สมศรี Create</span>
-					</a>
+					</a>-->
 				</div>
 				<!-- breadcrumb-wapp -->
 				<div class="hr">
@@ -116,95 +122,421 @@
 						สมศรี Create
 					</div>
 					<div class="panelbody">
-						<div style="width:50%">
-							▶ <span style="padding-left:30px">เลือกเนื้อผ้า </span><br/>
-							<div class="selectdiv">
-								<div class="selectstyle">
-									<select>
-										<option>กรุณาเลือกเนื้อผ้า</option>
-										<option>dd</option>
-										<option>ssa</option>
-										<option>dff</option>
-									</select>
+						<div id="control-wrap">
+							
+							<ul class="bootstrap nav nav-tabs" id="paneltab" role="tablist">
+							  <li class="nav-item">
+							    <a class="nav-link active normal-a" id="main-tab-button" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true">ปรับแต่งเสื้อผ้า</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link normal-a" id="img-tab-button" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="false">เพิ่มรูปภาพ</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link normal-a" id="text-tab-button" data-toggle="tab" href="#" role="tab" aria-controls="messages" aria-selected="false">เพิ่มข้อความ</a>
+							  </li>
+							</ul>
+							
+							<div id="main-tab">
+								▶ <span style="padding-left:30px">เลือกเนื้อผ้า </span><br/>
+								<div class="selectdiv">
+									<div class="selectstyle">
+										<select id="texture">
+											<!--<option>กรุณาเลือกเนื้อผ้า</option>-->
+											<option>Cotton</option>
+											<option>TC</option>
+											<option>TK</option>
+										</select>
+									</div>
+								</div>
+								<!--▶ <span style="padding-left:30px">เลือกแบบเสื้อ</span> <br/>
+								<div class="selectdiv">
+									<div class="selectstyle">
+										<select>
+											<option>กรุณาเลือกแบบเสื้อ</option>
+											<option>dd</option>
+											<option>ssa</option>
+											<option>dff</option>
+										</select>
+									</div>
+								</div>-->
+								▶ <span style="padding-left:30px">เลือกสีเสื้อ</span> <br/>
+								<div class="colordiv">
+									<div v-for="i in 32" class="colorcircle" :style="{'background-image':'url(im/create/color/'+i+'.png)'}" v-on:click="updateshirt(i);"></div>
 								</div>
 							</div>
-							▶ <span style="padding-left:30px">เลือกแบบเสื้อ</span> <br/>
-							<div class="selectdiv">
-								<div class="selectstyle">
-									<select>
-										<option>กรุณาเลือกแบบเสื้อ</option>
-										<option>dd</option>
-										<option>ssa</option>
-										<option>dff</option>
-									</select>
-								</div>
+							
+							<div id="img-tab">
+								▶ <span style="padding-left:30px">เพิ่มรูปภาพ</span> <br/>
+								<input id="img-tab-input" type="file" class="form-control" onchange="setimginputsrc(event);">
+								<!--<button id="img-tab-submit" type="button" class="btn btn-primary" onclick="addimage(event);">เพิ่มรูปภาพ</button>-->
 							</div>
-							▶ <span style="padding-left:30px">เลือกสีเสื้อ</span> <br/>
-							<div class="colordiv">
-								<div v-for="i in 32" class="colorcircle" :style="{'background-image':'url(im/create/color/'+i+'.png)'}"></div>
-								<!--<div class="colorcircle" style="background-color:rgb(255,255,255); color: black ;  " > 1  </div>
-								<div class="colorcircle" style="background-color:rgb(77,67,128); color: white;   ">  34  </div>
-								<div class="colorcircle" style="background-color:rgb(74,63,128); color: white;   ">  17  </div>
-								<div class="colorcircle" style="background-color:rgb(11,51,112); color: white;   ">  44  </div>
-								<div class="colorcircle" style="background-color:rgb(22,70,101); color: white;   ">  23  </div>
-								<div class="colorcircle" style="background-color:rgb(1,91,118); color: white;   ">  52  </div>
-								<div class="colorcircle" style="background-color:rgb(1,75,132); color: white;   ">  33  </div>
-								<div class="colorcircle" style="background-color:rgb(44,50,55); color: white;   ">  11  </div>
-								<div class="colorcircle" style="background-color:rgb(21,28,33); color: white;   ">  24  </div>
-								<div class="colorcircle" style="background-color:rgb(32,42,66); color: white;   ">  18  </div>
-								<div class="colorcircle" style="background-color:rgb(2,92,172); color: white;   ">  10  </div>
-								<div class="colorcircle" style="background-color:rgb(123,169,204); color: black ;  " > 42  </div>
-								<div class="colorcircle" style="background-color:rgb(0,166,218); color: white ;  " > 22  </div>
-								<div class="colorcircle" style="background-color:rgb(36,209,217); color: black ;  " > 16  </div>
-								<div class="colorcircle" style="background-color:rgb(34,206,243); color: black ;  " > 6  </div>
-								<div class="colorcircle" style="background-color:rgb(30,166,154); color: white;   ">  45  </div>
-								<div class="colorcircle" style="background-color:rgb(194,230,73); color: black ;  " > 28  </div>
-								<div class="colorcircle" style="background-color:rgb(151,210,83); color: black ;  " > 25  </div>
-								<div class="colorcircle" style="background-color:rgb(156,178,41); color: white;   ">  49  </div>
-								<div class="colorcircle" style="background-color:rgb(0,129,68); color: white;   ">  4  </div>
-								<div class="colorcircle" style="background-color:rgb(98,172,73); color: black ;  " > 51  </div>
-								<div class="colorcircle" style="background-color:rgb(63,89,28); color: white;   ">  36  </div>
-								<div class="colorcircle" style="background-color:rgb(39,48,29); color: white;   ">  37  </div>
-								<div class="colorcircle" style="background-color:rgb(9,41,40); color: white;   ">  35  </div>
-								<div class="colorcircle" style="background-color:rgb(2,80,56); color: white;   ">  48  </div>
-								<div class="colorcircle" style="background-color:rgb(255,232,29); color: black ;  " > 2  </div>
-								<div class="colorcircle" style="background-color:rgb(229,187,48); color: black ;  " > 40  </div>
-								<div class="colorcircle" style="background-color:rgb(249,201,60); color: black ;  " > 8  </div>
-								<div class="colorcircle" style="background-color:rgb(255,127,43); color: black ;  " > 13  </div>
-								<div class="colorcircle" style="background-color:rgb(241,124,48); color: black ;  " > 41  </div>
-								<div class="colorcircle" style="background-color:rgb(177,38,42); color: white;   ">  5  </div>
-								<div class="colorcircle" style="background-color:rgb(73,17,29); color: white;   ">  3  </div>
-								<div class="colorcircle" style="background-color:rgb(85,12,27); color: white;   ">  38  </div>
-								<div class="colorcircle" style="background-color:rgb(202,46,111); color: white;   ">  26  </div>
-								<div class="colorcircle" style="background-color:rgb(212,91,122); color: white ;  " > 47  </div>
-								<div class="colorcircle" style="background-color:rgb(222,158,195); color: black ;  " > 39  </div>
-								<div class="colorcircle" style="background-color:rgb(246,97,155); color: white;   ">  19  </div>
-								<div class="colorcircle" style="background-color:rgb(249,110,105); color: white;   ">  7  </div>
-								<div class="colorcircle" style="background-color:rgb(255,217,243); color: black ;  " > 12  </div>
-								<div class="colorcircle" style="background-color:rgb(224,115,110); color: white;   ">  46  </div>
-								<div class="colorcircle" style="background-color:rgb(239,84,116); color: white;   ">  9  </div>
-								<div class="colorcircle" style="background-color:rgb(253,250,234); color: black ;  " > 27  </div>
-								<div class="colorcircle" style="background-color:rgb(244,240,230); color: black ;  " > 21  </div>
-								<div class="colorcircle" style="background-color:rgb(209,189,166); color: black ;  " > 20  </div>
-								<div class="colorcircle" style="background-color:rgb(67,61,61); color: white;   ">  50  </div>
-								<div class="colorcircle" style="background-color:rgb(60,48,39); color: white;   ">  15  </div>
-								<div class="colorcircle" style="background-color:rgb(163,163,163); color: black ;  " > 43  </div>
-								<div class="colorcircle" style="background-color:rgb(138,137,143); color: white;   ">  14  </div>
-								<div class="colorcircle" style="background-color:rgb(0,0,0); color: white;   ">  100  </div>-->
+							
+							<div id="text-tab">
+								▶ <span id="text-tab-textlabel" style="padding-left:30px">ข้อความ</span> <br/>
+								<textarea onkeyup="updatetext()" id="text-tab-input" class="form-control"></textarea>
+								
+								<div style="margin-bottom:15px;">
+									▶ <span style="padding-left:30px; margin-right: 15px">สี</span>
+									<input onchange="updatetext()" type="color" id="text-tab-color" class="form-control">
+									<br>
+								</div>
+								
+								<button id="text-tab-submit" type="button" class="btn btn-primary" onclick="addtext();">เพิ่มข้อความ</button>
 							</div>
 						</div>
-						<div style="width:50%">
-							<canvas id="maincanvas"></canvas>
+						<div id="canvas-wrap">
+							<ul class="bootstrap nav nav-tabs" id="canvastab" role="tablist">
+							  <li class="nav-item">
+							    <a class="nav-link active normal-a" id="canvas-front-button" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true">ด้านหน้า</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link normal-a" id="canvas-back-button" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="false">ด้านหลัง</a>
+							  </li>
+							</ul>
+							<canvas id="frontcanvas"></canvas>
+							<canvas id="backcanvas"></canvas>
+							<button id="text-tab-submit" type="button" class="btn btn-primary" onclick="doexport();">Save</button>
 						</div>
 					</div>
 				</div>
 			</div>
+			
+			<canvas id="exportcanvas"></canvas>
 		</div>
+		
+
+		
+		<script src="component/img_lazy.js"></script>
 		
 		<script>
 		    new Vue({
                 el: '#vue-wrap'
             });
+		</script>
+		
+		<script>
+			var fcanvas = new fabric.Canvas('frontcanvas');
+			var bcanvas = new fabric.Canvas('backcanvas');
+			var canvas = fcanvas;
+			var currid = 1;
+			var currcontrol = 0;
+			var selectedval;
+			
+			function resizecanvas() {
+				fcanvas.setWidth($("#canvas-wrap").width());
+				fcanvas.setHeight($("#canvas-wrap").width()*1400/1200);
+				fcanvas.selection = false;
+				fcanvas.calcOffset();
+				
+				bcanvas.setWidth($("#canvas-wrap").width());
+				bcanvas.setHeight($("#canvas-wrap").width()*1400/1200);
+				bcanvas.selection = false;
+				bcanvas.calcOffset();
+				
+				$(".fabricimg").width(fcanvas.getWidth()+20);
+				$(".fabricimg").height(fcanvas.getHeight()+20);
+			}
+			
+			resizecanvas();
+			$(window).resize(resizecanvas);
+			
+			//initialize background (shirt img)
+			var fshirtobj,bshirtobj;
+			
+			$(window).on("load",function() {
+				var fshirtimg = new Image(); fshirtimg.src='im/create/front/'+1+'.jpg';
+				var bshirtimg = new Image(); bshirtimg.src='im/create/back/'+1+'.jpg';
+				fshirtobj = new fabric.Image(fshirtimg);
+				bshirtobj = new fabric.Image(bshirtimg);
+				
+				fshirtimg.onload = function() {
+					fshirtobj.set({ left: -10, top: -10 ,width:fcanvas.getWidth()+20,height:fcanvas.getHeight()+20});
+					fshirtobj.selectable = false;
+					fcanvas.add(fshirtobj);
+				};
+				
+				bshirtimg.onload = function() {
+					bshirtobj.set({ left: -10, top: -10 ,width:bcanvas.getWidth()+20,height:bcanvas.getHeight()+20});
+					bshirtobj.selectable = false;
+					bcanvas.add(bshirtobj);
+				};
+			});
+			//end initialize
+			
+			function updateshirt(id) {
+				currid = id;
+				
+				var fshirtimg = new Image(); fshirtimg.src='im/create/front/'+id+'.jpg';
+				var bshirtimg = new Image(); bshirtimg.src='im/create/back/'+id+'.jpg';
+				fshirtobj.setElement(fshirtimg);
+				bshirtobj.setElement(bshirtimg);
+				
+				
+				fshirtimg.onload = function() {
+					fshirtobj.set({ left: -10, top: -10 ,width:fcanvas.getWidth()+20,height:fcanvas.getHeight()+20});
+					fshirtobj.selectable = false;
+					fcanvas.renderAll();
+				};
+				
+				bshirtimg.onload = function() {
+					bshirtobj.set({ left: -10, top: -10 ,width:bcanvas.getWidth()+20,height:bcanvas.getHeight()+20});
+					bshirtobj.selectable = false;
+					bcanvas.renderAll();
+				};
+			}
+			
+			//updateshirt(1);
+			
+			//start text section
+				function addtext() {
+					var text = $("#text-tab-input").val();
+					var color = $("#text-tab-color").val();
+					
+					if (!canvas.getActiveObject()) {
+						canvas.add(new fabric.Text(text, {
+							left: 200,
+							top: 200,
+							fontFamily: 'promptlight',
+							fill: color
+						}));
+						
+						clearselection();
+					} else {
+						
+					}
+				}
+				
+				function updatetext() {
+					if (selectedobj) {
+						//console.log("aaa");
+						selectedobj.setText($("#text-tab-input").val());
+						selectedobj.setColor($("#text-tab-color").val());
+						canvas.renderAll();
+					}
+				}
+			//end text section
+			
+			//start image section
+				var imginputsrc = "";
+				
+				function setimginputsrc(e) {
+					var reader = new FileReader();
+					reader.readAsDataURL(e.target.files[0]);
+				    reader.onload = function(event){
+				    	imginputsrc = event.target.result;
+				    	addimage();
+				    	$("#img-tab-input").val("");
+				    };
+				}
+				
+				function addimage() {
+					if (!imginputsrc || imginputsrc=="") return;
+			        var imgobj = fabric.Image.fromURL(imginputsrc,function(img) {
+			        	if (img.width>200) {
+				        	var resizefactor = img.width/200; //width = 100 , height aspect ratio
+				        	img.width /= resizefactor;
+				        	img.height /= resizefactor;
+			        	}
+			        	img.left = 150;
+			        	img.top = 150;
+			        	canvas.add(img);
+			        });
+				}
+			//end image section
+			
+			//start selection section
+				function event_selected() {
+					selectedobj = canvas.getActiveObject();
+					//console.log(selectedobj);
+					if (selectedobj.type=="text") {
+						$("#paneltab").find("a").removeClass("active");
+						$("#text-tab-textlabel").html("แก้ไขข้อความ");
+						$("#text-tab-submit").hide();
+						$("#text-tab-input").val(selectedobj.text);
+						$("#text-tab-color").val(selectedobj.fill);
+					}
+				}
+				
+				fcanvas.on('object:selected', event_selected);
+				bcanvas.on('object:selected', event_selected);
+				
+				fcanvas.on('selection:cleared',function() { clearselection(); });
+				bcanvas.on('selection:cleared',function() { clearselection(); });
+			//end selection section
+			
+			//start export section
+				var ecanvas = new fabric.Canvas("exportcanvas");
+				ecanvas.setWidth(fcanvas.getWidth()*4);
+				ecanvas.setHeight(fcanvas.getHeight()*2);
+				$("#exportcanvas").parent().hide();
+				
+				function downloadURI(uri, name) {
+					function dataURIToBlob(dataURI) {
+					  var binStr = atob(dataURI.split(',')[1]),
+					    len = binStr.length,
+					    arr = new Uint8Array(len);
+					
+					  for (var i = 0; i < len; i++) {
+					    arr[i] = binStr.charCodeAt(i);
+					  }
+					
+					  return new Blob([arr]);
+					}
+					
+					var link = document.createElement("a");
+					link.download = name;
+					link.href = URL.createObjectURL(dataURIToBlob(uri));
+					document.body.appendChild(link);
+					link.click();
+					document.body.removeChild(link);
+					//delete link;
+				}
+				
+				function doexport() {
+					
+					ecanvas.clear();
+					
+					function zoom(c,lv) {
+						var factor = lv/c.getZoom();
+						c.setZoom(lv);
+						c.setWidth(c.getWidth()*factor);
+						c.setHeight(c.getHeight()*factor);
+					}
+					
+					zoom(fcanvas,2);
+					zoom(bcanvas,2);
+					
+					var fok = false;
+					var bok = false;
+					var textok = false;
+					
+					fabric.Image.fromURL(fcanvas.toDataURL(),function(img) {
+						img.set({left:0,top:0});
+						img.selectable = false;
+						ecanvas.add(img);
+						img.sendToBack();
+						fok = true;
+					});
+					
+					fabric.Image.fromURL(bcanvas.toDataURL(),function(img) {
+						img.set({left:fcanvas.getWidth(),top:0});
+						img.selectable = false;
+						ecanvas.add(img);
+						img.sendToBack();
+						bok = true;
+					});
+					
+					ecanvas.add(new fabric.Text("Color code : "+currid+" , เนื้อผ้า : "+$("#texture").val(), {
+						left: 20,
+						top: 20,
+						fontFamily: 'promptlight'
+					}));
+					textok = true;
+					
+					var interval = setInterval(function() {
+						if (fok && bok && textok) {
+							setTimeout(function() {
+								downloadURI(ecanvas.toDataURL(),"somsritshirt.png");
+								zoom(fcanvas,1);
+								zoom(bcanvas,1);
+								clearInterval(interval);
+								console.log("download run");
+							},1);
+						}
+					},100);
+				}
+			//end export section
+			
+			$(window).keydown(function(e) {    
+			    switch (e.keyCode) {
+			        case 46: // delete
+			         var obj = canvas.getActiveObject();
+			         canvas.remove(obj);
+			         canvas.renderAll();
+			         return false;
+			    }
+			    return; //using "return" other attached events will execute
+			});
+			
+			function clearselection() {
+				selectedobj = null;
+				canvas.deactivateAll().renderAll();
+				$("#text-tab-submit").show();
+				$("#text-tab-textlabel").html("ข้อความ");
+				$("#text-tab-input").val("");
+				//$("#text-tab-color").val("#000000");
+				switchcontrol(currcontrol,true);
+			}
+			
+			//tab control system
+			function switchcanvas(id) {
+				clearselection();
+				
+				if (id==0) {
+					//front
+					$("#backcanvas").parent().hide();
+					$("#frontcanvas").parent().show();
+					$("#canvas-back-button").removeClass("active");
+					$("#canvas-front-button").addClass("active");
+					canvas = fcanvas;
+				} else {
+					//back
+					$("#backcanvas").parent().show();
+					$("#frontcanvas").parent().hide();
+					$("#canvas-front-button").removeClass("active");
+					$("#canvas-back-button").addClass("active");
+					canvas = bcanvas;
+				}
+				resizecanvas();
+			}
+			
+			switchcanvas(0);
+			
+			$("#canvas-front-button").click(function(e) {
+				switchcanvas(0); e.preventDefault(); return false;
+			});
+			
+			$("#canvas-back-button").click(function(e) {
+				switchcanvas(1); e.preventDefault(); return false;
+			});
+			
+			function switchcontrol(id,notcls) {
+				if(!notcls) clearselection();
+				
+				$("#paneltab").find("a").removeClass("active");
+				if (id==0) {
+					$("#main-tab").show();
+					$("#img-tab").hide();
+					$("#text-tab").hide();
+					$("#main-tab-button").addClass("active");
+				} else if (id==1) {
+					$("#main-tab").hide();
+					$("#img-tab").show();
+					$("#text-tab").hide();
+					$("#img-tab-button").addClass("active");
+				} else if (id==2) {
+					$("#main-tab").hide();
+					$("#img-tab").hide();
+					$("#text-tab").show();
+					$("#text-tab-button").addClass("active");
+				}
+				
+				currcontrol = id;
+			}
+			
+			switchcontrol(0);
+			
+			$("#main-tab-button").click(function(e) {
+				switchcontrol(0); e.preventDefault(); return false;
+			});
+			
+			$("#img-tab-button").click(function(e) {
+				switchcontrol(1); e.preventDefault(); return false;
+			});
+			
+			$("#text-tab-button").click(function(e) {
+				switchcontrol(2); e.preventDefault(); return false;
+			});
 		</script>
 		
 		<script src="https://www.trustmarkthai.com/callbackData/initialize.js?t=b5cb10-32-5-30bf4b08f846172a35a5ff39a433191e01d2f99" id="dbd-init"></script><div id="Certificate-banners" style="text-align:center;"></div>
