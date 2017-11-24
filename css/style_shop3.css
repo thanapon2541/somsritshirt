@@ -335,7 +335,7 @@
 	width: calc(100% - 500px);
 }
 
-#text-tab-input , #img-tab-input {
+#text-tab-input , #img-tab-input , #text-tab-font , .controlrow {
 	margin-top: 15px;
 	margin-bottom:15px;
 }
@@ -347,6 +347,18 @@
 }
 
 #text-tab-color:hover {
+	cursor: pointer;
+}
+
+#text-tab-font {
+	font-family: promptlight;
+	font-size: 16pt;
+	
+	height:50px;
+	width:100%;
+}
+
+.btn:hover {
 	cursor: pointer;
 }
 
