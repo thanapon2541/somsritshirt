@@ -162,7 +162,7 @@
 								</div>-->
 								▶ <span style="padding-left:30px">เลือกสีเสื้อ</span> <br/>
 								<div class="colordiv">
-									<div v-for="i in 56" class="colorcircle" :style="{'background-image':'url(\'im/create/Asset ('+(3*i)+').jpg\')'}" v-on:click="updateshirt(i);"></div>
+									<div v-for="i in 55" class="colorcircle" :style="{'background-image':'url(\'im/create/Asset ('+(3*i)+').jpg\')'}" v-on:click="updateshirt(i);"></div>
 								</div>
 							</div>
 							
@@ -530,7 +530,67 @@
 						bok = true;
 					});
 					
-					ecanvas.add(new fabric.Text("Color code : "+currid+" , เนื้อผ้า : "+$("#texture").val(), {
+					function hotfix_colorcode(code) {
+						switch (code) {
+							case 01 : return 01; break;
+							case 02 : return 02; break;
+							case 03 : return 03; break;
+							case 04 : return 04; break;
+							case 05 : return 33; break; 
+							case 06 : return 34; break;
+							case 07 : return 35; break;
+							case 08 : return 36; break;
+							case 09 : return 05; break;
+							case 10 : return 06; break;
+							case 11 : return 07; break;
+							case 12 : return 08; break; 
+							case 13 : return 37; break;
+							case 14 : return 38; break; 
+							case 15 : return 39; break;
+							case 16 : return 40; break;
+							case 17 : return 09; break;
+							case 18 : return 10; break; 
+							case 19 : return 11; break;
+							case 20 : return 12; break;
+							case 21 : return 41; break;
+							case 22 : return 42; break;
+							case 23 : return 43; break;
+							case 24 : return 44; break;
+							case 25 : return 13; break;
+							case 26 : return 14; break;
+							case 27 : return 15; break;
+							case 28 : return 16; break;
+							case 29 : return 45; break; 
+							case 30 : return 46; break;
+							case 31 : return 47; break;
+							case 32 : return 48; break;
+							case 33 : return 17; break; 
+							case 34 : return 18; break;
+							case 35 : return 09; break; 
+							case 36 : return 20; break;
+							case 37 : return 49; break;
+							case 38 : return 50; break;
+							case 39 : return 51; break; 
+							case 40 : return 52; break;
+							case 41 : return 21; break;
+							case 42 : return 22; break;
+							case 43 : return 23; break; 
+							case 44 : return 24; break;
+							case 45 : return 53; break;
+							case 46 : return 54; break;
+							case 47 : return 55; break;
+							case 48 : return 25; break; 
+							case 49 : return 23; break; 
+							case 50 : return 27; break; 
+							case 51 : return 28; break; 
+							case 52 : return 29; break;
+							case 53 : return 30; break;
+							case 54 : return 31; break;
+							case 55 : return 32; break;
+						}
+					}
+					
+					ecanvas.add(new fabric.Text("Color code : "+hotfix_colorcode(currid)+" , เนื้อผ้า : "+$("#texture").val(), {
 						left: 20,
 						top: fcanvas.getHeight()+10,
 						fontFamily: 'promptlight',
