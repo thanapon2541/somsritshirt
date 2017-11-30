@@ -1,4 +1,4 @@
-.menu-wapp{
+/*.menu-wapp{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -13,4 +13,38 @@ body {
 	body {
 		padding-top: 80px;
 	}
+}*/
+
+#topmenu , #topmenu .dropdown-menu {
+	background-color: #ee4035;
+}
+
+#topmenu a {
+	color: white;
+	opacity: 1;
+	transition: opacity 0.25s;
+	padding: 5px 8px 5px 8px;
+}
+
+#topmenu a:hover {
+	opacity: 0.75;
+	background: none;
+}
+
+#topmenu .nav-link {
+	font-size: 16pt;
+}
+
+@media screen and (min-width:992px) {
+	#topmenu li.nav-item:not(:last-child) {
+		border-right: 2px solid white;
+	}
+}
+
+#topmenu .dropdown-toggle:after {
+	content: none;
+}
+
+#topmenu .navbar-brand img {
+	height: 50px;
 }

@@ -11,6 +11,15 @@
 		<meta property="og:description" content="สมศรีมีเสื้อ รับออกแบบ สกรีน และผลิตเสื้อทุกประเภทในราคาย่อมเยา สนับสนุนนักเรียนนักศึกษาโดยให้ส่วนลดพิเศษ เมื่อแสดงบัตรประจำตัวและราคาสำหรับบุคคลทั่วไปที่เหมาะสมและคู่ควรกับราคา" />
 		<meta property="og:title" content="สมศรีมีเสื้อ - รับผลิต สกรีน และออกแบบเสื้อ"/>
 		<meta property="og:image" content="http://somsritshirt.com/im/som_sb2.jpg"/>
+		
+		<!-- external library (jquery, vue, bootstrap and ...) -->
+		<script src='js/jquery.min.js'></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+		
 		<!-- css -->
 		<!--<link rel="stylesheet" href="css/style_3d.css">-->
 		<!-- 3d -->
@@ -27,10 +36,7 @@
 		<link rel="stylesheet" type="text/css" href="css/Prompt.css">
 		<link rel="stylesheet" type="text/css" href="css/style_edut_new.css">
 		<link rel="stylesheet" type="text/css" href="css/style_new.css">
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
 		<script src="js/shared.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 		<link rel="stylesheet" href="css/shared.css">
 		<style>
 font:link {
@@ -51,7 +57,7 @@ font:active {
 </style>
 	</head>
 	<body>
-		<div class="menu-wapp clearfix">
+		<!--<div class="menu-wapp clearfix">
 			<div class="wappp">
 				<div class="menum">
 					<div class="container">
@@ -82,7 +88,7 @@ font:active {
 						</div>
  						<script src="js/index_tgm.js"></script>
 					</div>
-					<!-- menum -->
+					
 				<div class="logoim left">
 					<a href="index.html"><img class="loim" src="im/somlogobeta.png"></a>
 				</div>
@@ -106,12 +112,14 @@ font:active {
 						<a href="contact.html"><li class="meundis_li meundis_linone">ติดต่อสมศรี</li></a>
 					</ul>
 				</nav>
-				<!-- menudis -->
+				
 				
 			</div>
-			<!-- wappp -->
-		</div>
+			
+		</div>-->
 		<!-- menu-wapp -->
+		
+		<div id="vue-wrap-menu"><topmenu></topmenu></div> <script src="component/topmenu.js"></script>
 		
 		<div id="vue-wrap">
 			<div class="banner-wapp clearfix">
@@ -338,6 +346,7 @@ font:active {
 		<script src="component/img_hover.js"></script>
 		<script src="component/img_lazy.js"></script>
 		<script src="component/homepage_share.js"></script>
+		
 		<script>
 		    new Vue({
                 el: '#vue-wrap'

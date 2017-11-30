@@ -148,6 +148,7 @@ ul,li{
     padding: 3% 1% 1% 1%;
     height: 22px;
     font-family: 'promptmedium';
+    background-size: 100%;
 }
 .ba2txet:hover{background-color: rgba(255,255,255,0.1);}
 .shopandcontact-wapp{
@@ -235,6 +236,9 @@ footer{
     overflow: hidden;
     font-size: 1em;
     background-color: #56b949;
+}
+.banner2-wapp .wappp {
+	width: 100%;
 }
 @media screen and (min-width:375px) {
 	.logoim{
@@ -409,11 +413,12 @@ footer{
 	}
 	.ba2txet{
 	    border: 4px solid #fff;
-	    margin-top: 418px;
+	    margin-top: 411px;
 	    margin-left: 6%;
 	    width: 148px;
 	    padding: 1%;
-	    height: 35px;
+	    height: 60px;
+	    font-size: 28px;
 	}
 	.shopandcontact-wapp{
 		padding-top: 90px;
@@ -461,7 +466,30 @@ footer{
 	    line-height: 40px;
 	    font-size: 1em;
 	}
+	.banner2-wapp .wappp {
+		width: 70%;
+	}
 }
+@media screen and (min-width:1400px) and (orientation: landscape) {
+	.ba2txet{
+		margin-top: 30%;
+	}
+	.banner2-wapp .wappp {
+		width: 80%;
+		
+	}
+	.banner2-wapp .wappp .ba2 {
+		background-position: 0 100%;
+	}
+}
+
+@media screen and (min-width:1600px) and (orientation: landscape) {
+	.ba2txet{
+		margin-top: 28%;
+	}
+}
+
+
 
 /*.menudis.right {
 	width: 300px;
