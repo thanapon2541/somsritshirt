@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>สมศรีมีเสื้อ - รับผลิต สกรีน และออกแบบเสื้อ</title>
+		<meta charset="utf-8">
+		<meta name="keywords" content="สมศรี,สมศรีมีเสื้อ,รับผลิตเสื้อยืด,รับผลิตเสื้อ,สกรีนเสื้อ,ทำเสื้อ,เสื้อพนักงาน,เสื้อค่าย,เสื้อกิจกรรม">
+		<meta name="description" content="สมศรีมีเสื้อ รับออกแบบ สกรีน และผลิตเสื้อทุกประเภทในราคาย่อมเยา สนับสนุนนักเรียนนักศึกษาโดยให้ส่วนลดพิเศษ เมื่อแสดงบัตรประจำตัวและราคาสำหรับบุคคลทั่วไปที่เหมาะสมและคู่ควรกับราคา" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="im/som-logo.ico">
+		<!--fb-->
+		<meta property="og:description" content="สมศรีมีเสื้อ รับออกแบบ สกรีน และผลิตเสื้อทุกประเภทในราคาย่อมเยา สนับสนุนนักเรียนนักศึกษาโดยให้ส่วนลดพิเศษ เมื่อแสดงบัตรประจำตัวและราคาสำหรับบุคคลทั่วไปที่เหมาะสมและคู่ควรกับราคา" />
+		<meta property="og:title" content="สมศรีมีเสื้อ - รับผลิต สกรีน และออกแบบเสื้อ"/>
+		<meta property="og:image" content="http://somsritshirt.com/im/som_sb2.jpg"/>
+		
+		<!-- external library (jquery, vue, bootstrap and ...) -->
+		<script src='js/jquery.min.js'></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+		
+		<!-- css -->
+		<link rel="stylesheet" href="css/normalize.min.css">
+    	<link rel="stylesheet" href="css/style_tgm.css">
+		<!-- togglem -->
+		<!-- me -->
+		<meta name="viewport" type="image/x-icon" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style_edut.css">
+		<link rel="stylesheet" type="text/css" href="css/style_about.css">
+		<link rel="stylesheet" type="text/css" href="css/style_price.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/Prompt.css">
+		<script src="js/shared.js"></script>
+		<link rel="stylesheet" href="css/shared.css">
+	</head>
+	<body>
+		<div id="vue-wrap-menu"><topmenu></topmenu></div> <script src="component/topmenu.js"></script>
+		
+		<div class="wappp">
+			<div class="breadcrumb-wapp clearfix">
+				<a href="index.html">
+					<span class="bt1 left">หน้าแรก</span>
+				</a>
+					<span class="bt1 left">&nbsp;>&nbsp;</span>
+				<a href="Blogs.html">
+					<span class="bt1 left">บล็อก</span>
+				</a>
+					<span class="bt1 left">&nbsp;>&nbsp;</span>
+				<a href="price.html">
+					<span class="bt1 abt1 left">ราคา?</span>
+				</a>
+			</div>
+			<!-- breadcrumb-wapp -->
+			<div class="hr">
+				<hr class="hr1">
+			</div>
+			<!-- hr -->
+			<div class="toppig">
+				<span class="toptext">ราคา</span>
+			</div>
+			<!-- toppig -->
+			
+			<div class="bodypanel noflexrow" id="bodypanel">
+				<div class="pricecon">
+					<div class="controlcon">
+						<div class="controlconchild">
+							<span>ประเภทของเสื้อ</span>
+							<select id="price-type" class="form-control">
+							  <option value="polo" selected>เสื้อโปโล</option>
+							</select>
+						</div>
+					</div>
+					<div class="controlcon">
+						<div class="controlconchild">
+							<span>ชนิดของผ้าที่ใช้</span>
+							<select id="price-fabric" class="form-control">
+							  <option value="cotton" selected>Cotton</option>
+							  <option value="TC">TC</option>
+							  <option value="TK">TK</option>
+							</select>
+						</div>
+					</div>
+					<div class="controlcon">
+						<div class="controlconchild">
+							<span>จำนวนเสื้อ</span>
+							<input id="price-amount" type="number" min="1" class="form-control" value="100" placeholder="ใส่ตัวเลขเท่านั้น">
+						</div>
+					</div>
+					<div class="controlcon">
+						<div class="controlconchild">
+							<span>จำนวนสีที่สกรีนด้านหน้า</span>
+							<input id="price-color-front" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
+						</div>
+					</div>
+					<div class="controlcon">
+						<div class="controlconchild">
+							<span>จำนวนสีที่สกรีนด้านหลัง</span>
+							<input id="price-color-back" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
+						</div>
+					</div>
+					<div class="controlcon">
+						<div class="controlconchild">
+							<span>จำนวนสีที่สกรีนแขนขวา</span>
+							<input id="price-color-right" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
+						</div>
+					</div>
+					<div class="controlcon">
+						<div class="controlconchild">
+							<span>จำนวนสีที่สกรีนแขนซ้าย</span>
+							<input id="price-color-left" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
+						</div>
+					</div>
+					<div class="controlcon">
+						<div class="controlconchild controlconcal">
+							<button onclick="calprice()">คำนวณ</button>
+							<div></span><span id="pricelabel">XX</span> <span>&nbsp;&nbsp;บาท / ตัว</span></div>
+						</div>
+					</div>
+					
+					<script>
+						//calculate price
+						function calprice() {
+							var fabric = $("#price-fabric").val();
+							var amount = parseInt($("#price-amount").val());
+							var colorfront = parseInt($("#price-color-front").val());
+							var colorback = parseInt($("#price-color-back").val());
+							var colorright = parseInt($("#price-color-right").val());
+							var colorleft = parseInt($("#price-color-left").val());
+							
+							var price = 0;
+							if (amount<=30) {
+								if (amount<3) {
+									price = 250;
+								} else if (amount<10) {
+									price = 210;
+								} else if (amount<=30) {
+									price = 185;
+								}
+								
+								if (colorfront>0) price+=50;
+								if (colorback>0) price+=50;
+								if (colorright>0) price+=50;
+								if (colorleft>0) price+=50;
+							} else {
+								if (fabric=="cotton") {
+									if (amount<=70) price=120;
+									else if (amount<=99) price=110;
+									else if (amount<=200) price=95;
+									else if (amount<=400) price=90;
+									else if (amount<=600) price=85;
+									else if (amount<=700) price=75;
+									else price = 65;
+								} else if (fabric=="TC" || fabric=="TK") {
+									if (amount<=70) price=100;
+									else if (amount<=99) price=90;
+									else if (amount<=200) price=75;
+									else if (amount<=400) price=70;
+									else if (amount<=600) price=65;
+									else if (amount<=700) price=55;
+									else price = 45;
+								}
+								
+								price += (colorfront+colorback+colorright+colorleft)*5;
+								
+								//block price
+								if (amount<100) {
+									price += 300/amount;
+								}
+							}
+							
+							price = parseFloat(price).toFixed(2);
+							
+							$("#pricelabel").html(price);
+						}
+						
+						calprice();
+						
+						setInterval(function() {
+							if (isNaN(parseInt($("#price-amount").val()))) $("#price-amount").val(0);
+							if (isNaN(parseInt($("#price-color-front").val()))) $("#price-color-front").val(0);
+							if (isNaN(parseInt($("#price-color-back").val()))) $("#price-color-back").val(0);
+							if (isNaN(parseInt($("#price-color-left").val()))) $("#price-color-left").val(0);
+							if (isNaN(parseInt($("#price-color-right").val()))) $("#price-color-right").val(0);
+						},100);
+					</script>
+				</div>
+				<div class="imgpos"><img src="im/price1.jpg" id="sizeimg1"></div>
+				<div class="imgpos"><img src="im/price2.jpg" id="sizeimg2"></div>
+				<script>
+					//control img size
+					function imgsize() {
+						document.getElementById("sizeimg1").width = document.getElementById("bodypanel").offsetWidth*0.90;
+						document.getElementById("sizeimg2").width = document.getElementById("bodypanel").offsetWidth*0.90;
+						//document.getElementById("sizeimg3").width = document.getElementById("bodypanel").offsetWidth*0.90;
+						//document.getElementById("sizeimg4").width = document.getElementById("bodypanel").offsetWidth*0.90;
+						
+						
+						//document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth*0.75;
+						//document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth*0.75 * 0.75;
+					}
+					window.onresize = imgsize;
+					imgsize();
+				</script>
+			</div>
+
+		</div>
+		
+		<footer>
+			Copyright © 2017 Somsri T-shirt All Right Reserved.
+		</footer>
+		
+		<div class="scroll_top"><div class="scroll_top_icon"></div></div>
+		
+	</body>
+</html>
