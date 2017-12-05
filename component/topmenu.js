@@ -1,6 +1,6 @@
 Vue.component('topmenu',{
     template: `
-        <nav id="topmenu" class="navbar navbar-expand-lg navbar-dark">
+        <nav id="topmenu" class="navbar navbar-expand-lg navbar-dark fixed-top">
             <a class="navbar-brand" href="index.html"><img src="im/somlogobeta.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
