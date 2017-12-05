@@ -44,6 +44,10 @@ footer {
     overflow: hidden;
     font-size: 1em;
     background-color: #30499b;
+    /*margin-top: 30px;*/
+}
+
+#Certificate-banners {
     margin-top: 30px;
 }
 
