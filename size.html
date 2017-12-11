@@ -18,6 +18,11 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 		
+		<!-- pace.js : loading progress bar -->
+		<script src="js/pace/pace.min.js"></script>
+		<link rel="stylesheet" href="js/pace/pace-theme-flash.css">
+		<link rel="stylesheet" href="css/fade.css">
+		
 		<!-- css -->
 		<link rel="stylesheet" href="css/normalize.min.css">
     	<link rel="stylesheet" href="css/style_tgm.css">
@@ -59,19 +64,7 @@
 			</div>
 			<!-- toppig -->
 			<div class="bodypanel" style="padding:0;text-align:center;" id="bodypanel">
-				<div style="width:100%"><img src="im/somsrisize.jpg" id="sizeimg"></div>
-				<script>
-					//control img size
-					function imgsize() {
-						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth*0.75;
-						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth*0.75 * 0.75;
-						
-						document.getElementById("sizeimg").width = document.getElementById("bodypanel").offsetWidth*0.75;
-						document.getElementById("sizeimg").height = document.getElementById("bodypanel").offsetWidth*0.75 * 0.75;
-					}
-					window.onresize = imgsize;
-					imgsize();
-				</script>
+				<div style="width:100%"><img src="im/somsrisize.jpg" id="sizeimg" width="100%"></div>
 			</div>
 
 		</div>

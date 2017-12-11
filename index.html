@@ -18,6 +18,11 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 		
+		<!-- pace.js : loading progress bar -->
+		<script src="js/pace/pace.min.js"></script>
+		<link rel="stylesheet" href="js/pace/pace-theme-flash.css">
+		<link rel="stylesheet" href="css/fade.css">
+		
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
 		
 		<!-- css -->
@@ -122,68 +127,7 @@ font:active {
 		<div id="vue-wrap-menu"><topmenu></topmenu></div> <script src="component/topmenu.js"></script>
 		
 		<div id="vue-wrap">
-			<div class="banner-wapp clearfix">
-				<div class="wappp">
-					<div class="slidban clearfix">
-						<div id="wrapper">      
-	   	  					<div id="slider-wrap">
-	      	  					<ul id="slider">
-	          	 					<li>
-	          	 						<img src="im/som_sb0_1.jpg" class="imgstick1">
-	          	 					</li>
-	          	 					<li>
-	          	 						<img-lazy src="im/som_sb0_2.jpg" class="imgstick1">
-	          	 					</li>
-	          	 					<li>
-	          	 						<img-lazy src="im/som_sb1.jpg" class="imgstick1"></img-lazy>
-	          	 					</li>
-	          	 					<li>
-	          	 						<img-lazy src="im/som_sb2.jpg" class="imgstick1"></img-lazy>
-	          	 					</li>
-						            <li>
-						            	<img-lazy src="im/som_sb3.jpg" class="imgstick1"></img-lazy>
-						            </li>
-	             				</ul>
-	          					<!--controls-->
-	          					<div class="btns" id="next">
-	          						<i class="fa fa-arrow-right"></i>
-	          					</div>
-	          					<div class="btns" id="previous">
-	          						<i class="fa fa-arrow-left"></i>
-	          					</div>
-	          					<div id="pagination-wrap">
-						            <ul>
-						            </ul>
-					          	</div>
-					          	<!--controls-->  
-	                 		</div>
-						</div>
-						
-						<script src="js/index_sdliban.js"></script>
-					</div>
-					<!-- slidban -->
-					<div class="bannercontact">
-						<div class="bannercontact_l left">
-							<span class="bannercontact_t1">ติดตามสมศรีได้ที่</span>
-							<br>
-							<span class="bannercontact_t2">LET'S FOLLOW US</span>
-						</div>
-						<!-- bannercontact_l -->
-						<div class="bannercontact_r right">
-							<a target="_blank" href="https://www.facebook.com/somsritshirt/?__mref=message_bubble">
-								<div class="icban icb1"></div>
-							</a>
-							<a target="_blank" href="https://line.me/R/ti/p/%40diz8986o">
-								<div class="icban icb2"></div>
-							</a>
-						</div>
-						<!-- bannercontact_r -->
-					</div>
-					<!-- bannercontact -->
-				</div>
-				<!-- wappp -->
-			</div>
-			<!-- banner-wapp -->
+
 			<div class="banner2-wapp clearfix">
 				<div class="wappp">
 					<div class="ba2">
@@ -196,65 +140,31 @@ font:active {
 				</div>
 				<!-- wappp -->
 			</div>
-		
-			<div class="shopandcontact-wapp clearfix">
-				<div class="titleimg"><img src="im/homepage/share/1.png"></div>
-				
+			
+			<center>
+				<div style="margin-top:20px; margin-bottom:20px;"><img width="90%" src="im/W1.png"></div>
+			</center>
+			
+			<div id="garuntee" class="clearfix">
+				<div class="garuntee-flex">
+					<img-hover src="im/G1.jpg" srchover="im/G1h.jpg"></img-hover>
+					<img-hover src="im/G2.jpg" srchover="im/G2h.jpg"></img-hover>
+					<img-hover src="im/G3.jpg" srchover="im/G3h.jpg"></img-hover>
+					<img-hover src="im/G4.jpg" srchover="im/G4h.jpg"></img-hover>
+				</div>
 				<script>
-					function homepage_share_normal(s,e) {
-						var res = [];
-						for(var i = s;i<=e;i++) {
-							res.push('im/homepage/share/pic'+i+'.jpg');
-						}
-						return res;
-					}
 					
-					function homepage_share_hover(s,e) {
-						var res = [];
-						for(var i = s;i<=e;i++) {
-							res.push('im/homepage/share/opic'+i+'.jpg');
-						}
-						return res;
-					}
+					setInterval(() => {
+						$("#garuntee .garuntee-flex img").each(function() {
+							$(this).css("width",$(window).width()*0.22);
+							//$(this).css("height",$(window).height*0.3);
+						});
+					},100);
 				</script>
-				
-				<homepage-share :data="homepage_share_normal(1,11)" :datahover="homepage_share_hover(1,11)" offset="-250"></homepage-share>
-				<div class="homepage-share-margin"></div>
-				<homepage-share :data="homepage_share_normal(12,21)" :datahover="homepage_share_hover(12,21)"></homepage-share>
 			</div>
-		
+			
 			<div class="titleimg"><img src="im/somjai.png"></div>
-				<!--<div id="slider-wrap">
-	      	  					<ul id="slider">
-	          	 					<li>
-	          	 						<img src="im/R1.jpg" class="imgstick1">
-	          	 					</li>
-	          	 					<li>
-	          	 						<img src="im/R2.jpg" class="imgstick1">
-	          	 					</li>
-	          	 					<li>
-	          	 						<img src="im/R3.jpg" class="imgstick1">
-	          	 					</li>
-	          	 					<li>
-	          	 						<img src="im/R4.jpg" class="imgstick1">
-	          	 					</li>
-						            <li>
-						            	<img src="im/R5.jpg" class="imgstick1">
-						            </li>
-	             				</ul>
-	          					
-	          					<div class="btns" id="next">
-	          						<i class="fa fa-arrow-right"></i>
-	          					</div>
-	          					<div class="btns" id="previous">
-	          						<i class="fa fa-arrow-left"></i>
-	          					</div>
-	          					<div id="pagination-wrap">
-						            <ul>
-						            </ul>
-					          	</div>
-					          	 
-	                 		</div>-->
+
 	      	<div id="feedback" class="">
 	      		<div class="feedback-left" onclick="feedback_pos=(feedback_pos>0?feedback_pos-1:0)"></div>
 	      		<div class="feedback-wrap">
@@ -298,28 +208,34 @@ font:active {
 					},100);
 				</script>
 	      	</div>
-	
-			<div id="garuntee" class="clearfix">
-				<div class="garuntee-flex">
-					<img-hover src="im/G1.jpg" srchover="im/G1h.jpg"></img-hover>
-					<img-hover src="im/G2.jpg" srchover="im/G2h.jpg"></img-hover>
-					<img-hover src="im/G3.jpg" srchover="im/G3h.jpg"></img-hover>
-					<img-hover src="im/G4.jpg" srchover="im/G4h.jpg"></img-hover>
-				</div>
+		
+			<!-- mashare -->
+			<div class="clearfix" style="margin-bottom: 20px;">
+				<div class="titleimg"><img src="im/homepage/share/1.png"></div>
+				
 				<script>
+					function homepage_share_normal(s,e) {
+						var res = [];
+						for(var i = s;i<=e;i++) {
+							res.push('im/homepage/share/pic'+i+'.jpg');
+						}
+						return res;
+					}
 					
-					setInterval(() => {
-						$("#garuntee .garuntee-flex img").each(function() {
-							$(this).css("width",$(window).width()*0.22);
-							//$(this).css("height",$(window).height*0.3);
-						});
-					},100);
+					function homepage_share_hover(s,e) {
+						var res = [];
+						for(var i = s;i<=e;i++) {
+							res.push('im/homepage/share/opic'+i+'.jpg');
+						}
+						return res;
+					}
 				</script>
+				
+				<homepage-share :data="homepage_share_normal(1,11)" :datahover="homepage_share_hover(1,11)" offset="-250"></homepage-share>
+				<div class="homepage-share-margin"></div>
+				<homepage-share :data="homepage_share_normal(12,21)" :datahover="homepage_share_hover(12,21)"></homepage-share>
 			</div>
-			<center>
-				<div class=""><img width="90%" src="im/W1.png"></div>
-				<a href="why.html"><img src="im/W1b.png"></a>
-			</center>
+
 			
 			<a href="faq.html"><img width="100%" src="im/Q.jpg"></a>
 		</div>

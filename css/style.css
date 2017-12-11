@@ -115,7 +115,7 @@ ul,li{
 .ba2{
 	width: 100%;
 	height: 180px;
-	background-image: url(../im/som_ba2.jpg);
+	background-image: url(../im/som_ba3.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -479,7 +479,7 @@ footer{
 		
 	}
 	.banner2-wapp .wappp .ba2 {
-		background-position: 0 100%;
+		background-position: 0 75%;
 	}
 }
 
@@ -491,7 +491,7 @@ footer{
 
 @media screen and (min-width:1600px) and (orientation: landscape) {
 	.ba2txet{
-		margin-top: 25%;
+		margin-top: 26%;
 	}
 }
 

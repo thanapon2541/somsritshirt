@@ -14,7 +14,7 @@ Vue.component('topmenu',{
                         <a class="nav-link" href="shop.html">สั่งทำเสื้อ</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="Blogs.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="Blogs.html" onclick="window.location='Blogs.html'" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <!--href bug-->
                             รายละเอียด
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -39,9 +39,9 @@ Vue.component('topmenu',{
     mounted: function() { setTimeout(()=> {
         console.log($(this.$el));
         $(this.$el).find('li.dropdown').hover(function() {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(250);
+            $(this).find('.dropdown-menu').stop(true, true).fadeIn(100);
         }, function() {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(250);
+            $(this).find('.dropdown-menu').stop(true, true).fadeOut(100);
         });
     },10); }
 });
