@@ -240,17 +240,17 @@ font:active {
 	
 			<div id="garuntee" class="clearfix">
 				<div class="garuntee-flex">
-					<img-hover src="im/G1.jpg" srchover="im/G1h.jpg"></img-hover>
-					<img-hover src="im/G2.jpg" srchover="im/G2h.jpg"></img-hover>
-					<img-hover src="im/G3.jpg" srchover="im/G3h.jpg"></img-hover>
-					<img-hover src="im/G4.jpg" srchover="im/G4h.jpg"></img-hover>
+					<img src="im/G1.jpg">
+					<img src="im/G2.jpg">
+					<img src="im/G3.jpg">
+					<img src="im/G4.jpg">
 				</div>
 				<script>
 					
 					setInterval(() => {
 						$("#garuntee .garuntee-flex img").each(function() {
 							$(this).css("width",$(window).width()*0.22);
-							//$(this).css("height",$(window).height*0.3);
+							$(this).css("height",$(window).width()*0.25);
 						});
 					},100);
 				</script>

@@ -38,7 +38,7 @@ ul,li{
 }
 .menu-wapp{
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: #ee4035;
 }
 .wappp{
@@ -143,8 +143,8 @@ ul,li{
     position: absolute;
     margin-top: 124px;
     margin-left: 8%;
-    font-size: 12pt;
-    width: 70px;
+    font-size: 11pt;
+    width: 80px;
     padding: 1% 1% 1% 1%;
     height: 30px;
     font-family: 'promptmedium';
@@ -500,3 +500,11 @@ footer{
 /*.menudis.right {
 	width: 300px;
 }*/
+
+/*mobile hotfix*/
+.menum {
+	height: 75px;
+	position: relative;
+	width:50px;
+	margin-left:auto;
+}

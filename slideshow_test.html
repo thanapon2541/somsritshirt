@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+    </head>
+    <body>
+        <div id="vue-wrap">
+            <slideshow :data=["im/why01.PNG","im/why02.PNG"]></slideshow>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+        <script src="component/slideshow.js"></script>
+        <link rel="stylesheet" href="component/slideshow.css">
+        
+        <script>
+		    new Vue({
+                el: '#vue-wrap'
+            });
+        </script>
+    </body>
+</html>

@@ -1,8 +1,10 @@
 .container {
-    position: relative;
+    position: absolute;
     overflow-x: hidden;
     height: 100%;
-    width: 60px;
+    width: 50px;
+    
+    right: 20px;
 }
 
 /* Main */
@@ -114,18 +116,20 @@ header h1 {
 
 .hamburger {
     display: block;
-    position: relative;
+    position: absolute;
     margin-left: 14px;
-    margin-top: 30px;
+    margin-top: 20px;
     cursor: pointer;
     z-index: 500;
     border-radius: 5px;
     background-color: #ffffff;
     border: 2px solid #EE4035;
     padding: 10px 7px;
-    width: 28px;
-    height: 20px;
+    width: 50px;
+    height: 45px;
     transition-property: background-color, border-color;
+    
+    right: 0;
 }
 
 .bar {

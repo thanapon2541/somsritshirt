@@ -62,6 +62,17 @@ font:active {
 </style>
 	</head>
 	<body>
+		<script>
+			//mobile fix
+			$(document).ready(function() {
+				setTimeout(function() {
+					if ($(window).width()<640 || isoldandroid) {
+						window.location = "index_m.html";
+					}
+				}, 10);
+			});
+		</script>
+		
 		<!--<div class="menu-wapp clearfix">
 			<div class="wappp">
 				<div class="menum">
@@ -70,9 +81,6 @@ font:active {
 					        <nav class="nav">
 					            <ul class="nav-items">
 					                <li class="nav-title">เมนู</li>
-					                <li>
-					                	<a href="edut.html" class="nav-link">EduT-</a>
-					                </li>
 					                <li>
 					                	<a href="shop.html" class="nav-link">สั่งทำเสื้อ</a>
 					                </li>
@@ -95,15 +103,10 @@ font:active {
 					</div>
 					
 				<div class="logoim left">
-					<a href="index.html"><img class="loim" src="im/somlogobeta.png"></a>
+					<a href="index.html"><img class="loim" src="im/somlogo.png"></a>
 				</div>
 				<nav class="menudis right">
 					<ul class="meundis_ul">
-						<div class="dr">
-							<a href="edut.html">
-								<li class="meundis_li">EduT-</li>
-							</a>
-						</div>
 						<div class="dr">
 							<a href="shop.html">
 								<li class="meundis_li">สั่งทำเสื้อ</li>
@@ -146,7 +149,7 @@ font:active {
 			</center>
 			
 			<div id="garuntee" class="clearfix">
-				<div class="garuntee-flex">
+				<div class="garuntee-flex computer">
 					<img-hover src="im/G1.jpg" srchover="im/G1h.jpg"></img-hover>
 					<img-hover src="im/G2.jpg" srchover="im/G2h.jpg"></img-hover>
 					<img-hover src="im/G3.jpg" srchover="im/G3h.jpg"></img-hover>
@@ -161,6 +164,10 @@ font:active {
 						});
 					},100);
 				</script>
+				
+				<!--<div class="garuntee-mobile mobile">
+					<slideshow :data='["im/G1.jpg","im/G2.jpg","im/G3.jpg","im/G4.jpg"]'></slideshow>;
+				</div>-->
 			</div>
 			
 			<div class="titleimg"><img src="im/somjai.png"></div>
@@ -262,6 +269,8 @@ font:active {
 		<script src="component/img_hover.js"></script>
 		<script src="component/img_lazy.js"></script>
 		<script src="component/homepage_share.js"></script>
+		<script src="component/slideshow.js"></script>
+		<link rel="stylesheet" href="component/slideshow.css">
 		
 		<script>
 		    new Vue({
