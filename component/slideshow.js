@@ -1,5 +1,7 @@
 jQuery.fn.extend({
     slideshow: function(img,width) {
+        alert("fuck");        
+        
         var container = this.append('<div class="slideshow-container"> </div>').find(".slideshow-container");
         if (width) container.css("max-width",width);
         container.data("slide",1);
@@ -35,7 +37,9 @@ jQuery.fn.extend({
             container.data("slide",newslide);
         });
         
-        setInterval(() => {
+        var thiss = this;
+        
+        setInterval(function() {
             container.find(".mySlides").each(function () {
                 if ($(this).data("id") == container.data("slide")) {
                     $(this).show();
