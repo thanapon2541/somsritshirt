@@ -20,6 +20,10 @@
 		
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
 		
+		<!-- slideshow mobile compat component-->
+		<script src="component/slideshow.js"></script>
+		<link rel="stylesheet" href="component/slideshow.css">
+		
 		<!-- css -->
 		<!--<link rel="stylesheet" href="css/style_3d.css">-->
 		<!-- 3d -->
@@ -135,6 +139,11 @@ font:active {
 				</div>
 				<!-- wappp -->
 			</div>
+			
+			<center>
+				<div class=""><img width="90%" src="im/W1.png"></div>
+				
+			</center>
 		
 			<!--<div class="shopandcontact-wapp clearfix">
 				<div class="titleimg"><img src="im/homepage/share/1.png"></div>
@@ -162,7 +171,7 @@ font:active {
 				<homepage-share :data="homepage_share_normal(12,21)" :datahover="homepage_share_hover(12,21)"></homepage-share>
 			</div>-->
 		
-			<div class="titleimg"><img src="im/somjai.png"></div>
+			
 				<!--<div id="slider-wrap">
 	      	  					<ul id="slider">
 	          	 					<li>
@@ -255,12 +264,37 @@ font:active {
 					},100);
 				</script>
 			</div>
-			<center>
-				<div class=""><img width="90%" src="im/W1.png"></div>
-				<a href="why.html"><img src="im/W1b.png"></a>
-			</center>
+		</div>
+		
+		<div class="titleimg"><img src="im/somjai.png"></div>
+		<div id="feedback_slideshow"></div>
+        <script>
+            $("#feedback_slideshow").slideshow(["im/R1.jpg","im/R2.jpg","im/R3.jpg","im/R4.jpg"],1000);
+        </script>
+        
+		<div class="clearfix" style="margin-bottom: 20px;">
+			<div class="titleimg"><img src="im/homepage/share/1.png"></div>
+			<span id="share_slideshow"></span>
 			
-			<a href="faq.html"><img width="100%" src="im/Q.jpg"></a>
+			<script>
+				function homepage_share_normal(s,e) {
+					var res = [];
+					for(var i = s;i<=e;i++) {
+						res.push('im/homepage/share/pic'+i+'.jpg');
+					}
+					return res;
+				}
+				
+				function homepage_share_hover(s,e) {
+					var res = [];
+					for(var i = s;i<=e;i++) {
+						res.push('im/homepage/share/opic'+i+'.jpg');
+					}
+					return res;
+				}
+				
+				$("#share_slideshow").slideshow(homepage_share_normal(1,21),500);
+			</script>
 		</div>
 		
 		

@@ -1,34 +1,48 @@
-Vue.component('slideshow',{
-    template: `
-    <div class="slideshow-vue-wrap">
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-            <!-- Full-width images with number and caption text -->
-            <div v-for="(img,i) in data" class="mySlides" :style="{'display':(current==i?'block':'none')}">
-                <div class="numbertext">{{i+1}} / {{data.length}}</div>
-                <img :src="img" :style="{'width':'100%'}">
-            </div>
-            <!-- Next and previous buttons -->
-            <a class="prev" v-on:click="current--; if(current<0) current=0;">&#10094;</a>
-            <a class="next" v-on:click="current++; if(current>=data.length) current=data.length-1;">&#10095;</a>
-        </div>
+jQuery.fn.extend({
+    slideshow: function(img,width) {
+        var container = this.append('<div class="slideshow-container"> </div>').find(".slideshow-container");
+        if (width) container.css("max-width",width);
+        container.data("slide",1);
         
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span v-for="(img,i) in data" class="dot" v-on:click="current=i"></span> 
-        </div>
-    </div>
-    `,
-    props: ['data'],
-    data: function() {
-        return {
-            current: 0
-        };
-    },
-    created: function() {
+        $.each(img,function(i,src) {
+            container.append('<div class="mySlides" data-id="'+(i+1)+'"> <div class="numbertext">'+(i+1)+' / '+img.length+'</div> <img src="'+src+'" style="width:100%"> </div>');
+        });
         
-    },
-    methods: {
+        container.append('<a class="prev">&#10094;</a>');
+        container.append('<a class="next"">&#10095;</a>');
         
+        /*var dotcontainer = container.append('<div class="dotcontainer" style="text-align:center"> </div>').find('.dotcontainer');
+        
+        for(var i = 1;i<=img.length;i++) {
+            dotcontainer.append('<span class="dot"></span>');
+        }
+        
+        dotcontainer.find("span").each(function(i) {
+            $(this).click(function() {
+                container.data("slide",i+1);
+            });
+        });*/
+            
+        container.find(".prev").click(function() {
+            var newslide = container.data("slide")-1;
+            if (newslide<1) newslide = img.length;
+            container.data("slide",newslide);
+        });
+        
+        container.find(".next").click(function() {
+            var newslide = container.data("slide")+1;
+            if (newslide>img.length) newslide = 1;
+            container.data("slide",newslide);
+        });
+        
+        setInterval(() => {
+            container.find(".mySlides").each(function () {
+                if ($(this).data("id") == container.data("slide")) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }, 100);
     }
 });
