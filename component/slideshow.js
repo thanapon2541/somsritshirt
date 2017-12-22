@@ -1,6 +1,5 @@
 jQuery.fn.extend({
     slideshow: function(img,width) {
-        alert("fuck");        
         
         var container = this.append('<div class="slideshow-container"> </div>').find(".slideshow-container");
         if (width) container.css("max-width",width);
