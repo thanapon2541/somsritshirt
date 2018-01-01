@@ -66,12 +66,27 @@
 			<!-- toppig -->
 			
 			<div class="bodypanel noflexrow" id="bodypanel">
+				<div class="priceheadcon">
+					<div class="priceheadchild">
+						<div class="priceheadbutton" onclick="$('#modal-tshirt').modal('show')"><div class="priceheadbutton_flex"><div><span class="priceheadbutton_label_main">เสื้อยืด</span><br><span class="priceheadbutton_label_sub">- คลิก -</span></div></div></div>
+						<img src="im/price_tshirt.png">
+					</div>
+					<div class="priceheadchild">
+						<div class="priceheadbutton" onclick="$('#modal-polo').modal('show')"><div class="priceheadbutton_flex"><div><span class="priceheadbutton_label_main">เสื้อโปโล</span><br><span class="priceheadbutton_label_sub">- คลิก -</span></div></div></div>
+						<img src="im/price_polo.png">
+					</div>
+				</div>
+				
+				<hr style="border-color:black; margin-bottom: 10px;">
+				<div style="text-align:center; margin-bottom: 10px;">หรือประเมิณคร่าวๆด้วยโปรแกรมของทางเราค่ะ</div>
+				
 				<div class="pricecon">
+					<div class="controlcon"><div class="controlconchild"><span>* ราคาเสื้อรวมสกรีน</span></div></div>
 					<div class="controlcon">
 						<div class="controlconchild">
 							<span>ประเภทของเสื้อ</span>
 							<select id="price-type" class="form-control">
-							  <option value="polo" selected>เสื้อโปโล</option>
+							  <option value="tshirt" selected>เสื้อยืด</option>
 							</select>
 						</div>
 					</div>
@@ -194,7 +209,7 @@
 						},100);
 					</script>
 				</div>
-				<div class="imgpos"><img src="im/price1.jpg" id="sizeimg1"></div>
+				<!--<div class="imgpos"><img src="im/price1.jpg" id="sizeimg1"></div>
 				<div class="imgpos"><img src="im/price2.jpg" id="sizeimg2"></div>
 				<div class="imgpos"><img src="im/price3.jpg" id="sizeimg3"></div>
 				<script>
@@ -211,7 +226,26 @@
 					}
 					window.onresize = imgsize;
 					imgsize();
-				</script>
+				</script>-->
+			</div>
+			
+			<div id="modal-tshirt" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			    <div class="modal-dialog modal-lg">
+			        <div class="modal-content">
+			            <div class="modal-header">
+			                <h5 class="modal-title">ราคาเสื้อยืด</h5>
+			                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                <span aria-hidden="true">&times;</span>
+			                </button>
+			            </div>
+			            <div class="modal-body">
+			                <img src="im/price2.jpg" style="width:100%; height:100%;">
+			            </div>
+			            <div class="modal-footer">
+			                <button type="button" class="btn btn-primary" data-dismiss="modal">ปิด</button>
+			            </div>
+			        </div>
+			    </div>
 			</div>
 
 		</div>
