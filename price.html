@@ -138,25 +138,25 @@
 							<input id="price-amount" type="number" min="1" class="form-control" value="100" placeholder="ใส่ตัวเลขเท่านั้น">
 						</div>
 					</div>
-					<div class="controlcon">
+					<div class="controlcon price-color">
 						<div class="controlconchild">
 							<span>จำนวนสีที่สกรีนด้านหน้า</span>
 							<input id="price-color-front" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
 						</div>
 					</div>
-					<div class="controlcon">
+					<div class="controlcon price-color">
 						<div class="controlconchild">
 							<span>จำนวนสีที่สกรีนด้านหลัง</span>
 							<input id="price-color-back" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
 						</div>
 					</div>
-					<div class="controlcon">
+					<div class="controlcon price-color">
 						<div class="controlconchild">
 							<span>จำนวนสีที่สกรีนแขนขวา</span>
 							<input id="price-color-right" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
 						</div>
 					</div>
-					<div class="controlcon">
+					<div class="controlcon price-color">
 						<div class="controlconchild">
 							<span>จำนวนสีที่สกรีนแขนซ้าย</span>
 							<input id="price-color-left" type="number" min="0" class="form-control" value="0" placeholder="ใส่ตัวเลขเท่านั้น">
@@ -219,7 +219,10 @@
 										else price = 45;
 									}
 									
-									price += (colorfront+colorback+colorright+colorleft)*5;
+									var allcolor = colorfront+colorback+colorright+colorleft-1;
+									if (allcolor<0) allcolor = 0; 
+									
+									price += allcolor*5;
 									
 									//block price
 									if (amount<100) {
@@ -268,10 +271,12 @@
 								$("#price-fabric").removeClass("fabric-polo");
 								$("#price-fabric").addClass("fabric-tshirt");
 								$("#price-fabric").val("cotton");
+								$(".price-color").show();
 							} else if ($("#price-type").val()=="polo") {
 								$("#price-fabric").addClass("fabric-polo");
 								$("#price-fabric").removeClass("fabric-tshirt");
 								$("#price-fabric").val("TCbright");
+								$(".price-color").hide();
 							}
 						}
 						
