@@ -47,12 +47,12 @@
 					<span class="bt1 left">หน้าแรก</span>
 				</a>
 					<span class="bt1 left">&nbsp;>&nbsp;</span>
-				<a href="Blogs.html">
+				<!--<a href="Blogs.html">
 					<span class="bt1 left">บล็อก</span>
 				</a>
-					<span class="bt1 left">&nbsp;>&nbsp;</span>
+					<span class="bt1 left">&nbsp;>&nbsp;</span>-->
 				<a href="price.html">
-					<span class="bt1 abt1 left">ราคา?</span>
+					<span class="bt1 abt1 left">ราคา</span>
 				</a>
 			</div>
 			<!-- breadcrumb-wapp -->
@@ -85,17 +85,20 @@
 					<div class="controlcon">
 						<div class="controlconchild">
 							<span>ประเภทของเสื้อ</span>
-							<select id="price-type" class="form-control">
+							<select id="price-type" class="form-control" onchange="shirttypechange()">
 							  <option value="tshirt" selected>เสื้อยืด</option>
+							  <option value="polo">เสื้อโปโล</option>
 							</select>
 						</div>
 					</div>
 					<div class="controlcon">
 						<div class="controlconchild">
 							<span>ชนิดของผ้าที่ใช้</span>
-							<select id="price-fabric" class="form-control">
-							  <option value="cotton" selected>Cotton</option>
-							  <option value="TC">TC</option>
+							<select id="price-fabric" class="form-control fabric-tshirt">
+							  <option class="tshirtonly" value="cotton" selected>Cotton</option>
+							  <option class="tshirtonly" value="TC">TC</option>
+							  <option class="poloonly" value="TCbright">TC สีอ่อน</option>
+							  <option class="poloonly" value="TCdark">TC สีเข้ม</option>
 							  <option value="TK">TK</option>
 							</select>
 						</div>
@@ -145,6 +148,7 @@
 					<script>
 						//calculate price
 						function calprice() {
+							var type = $("#price-type").val();
 							var fabric = $("#price-fabric").val();
 							var amount = parseInt($("#price-amount").val());
 							var colorfront = parseInt($("#price-color-front").val());
@@ -167,29 +171,58 @@
 								if (colorright>0) price+=50;
 								if (colorleft>0) price+=50;
 							} else {
-								if (fabric=="cotton") {
-									if (amount<=70) price=120;
-									else if (amount<=99) price=110;
-									else if (amount<=200) price=95;
-									else if (amount<=400) price=90;
-									else if (amount<=600) price=85;
-									else if (amount<=700) price=75;
-									else price = 65;
-								} else if (fabric=="TC" || fabric=="TK") {
-									if (amount<=70) price=100;
-									else if (amount<=99) price=90;
-									else if (amount<=200) price=75;
-									else if (amount<=400) price=70;
-									else if (amount<=600) price=65;
-									else if (amount<=700) price=55;
-									else price = 45;
-								}
-								
-								price += (colorfront+colorback+colorright+colorleft)*5;
-								
-								//block price
-								if (amount<100) {
-									price += 300/amount;
+								if (type=="tshirt") {
+									if (fabric=="cotton") {
+										if (amount<=70) price=120;
+										else if (amount<=99) price=110;
+										else if (amount<=200) price=95;
+										else if (amount<=400) price=90;
+										else if (amount<=600) price=85;
+										else if (amount<=700) price=75;
+										else price = 65;
+									} else if (fabric=="TC" || fabric=="TK" || fabric=="TCbright" || fabric=="TCdark") {
+										if (amount<=70) price=100;
+										else if (amount<=99) price=90;
+										else if (amount<=200) price=75;
+										else if (amount<=400) price=70;
+										else if (amount<=600) price=65;
+										else if (amount<=700) price=55;
+										else price = 45;
+									}
+									
+									price += (colorfront+colorback+colorright+colorleft)*5;
+									
+									//block price
+									if (amount<100) {
+										price += 300/amount;
+									}
+								} else if (type=="polo") {
+									if (fabric=="TCbright") {
+										if (amount<=99) price=135;
+										else if (amount<=200) price=130;
+										else if (amount<=400) price=120;
+										else if (amount<=600) price=115;
+										else if (amount<=700) price=105;
+										else price = 95;
+									} else if (fabric=="TCdark") {
+										if (amount<=99) price=155;
+										else if (amount<=200) price=150;
+										else if (amount<=400) price=130;
+										else if (amount<=600) price=125;
+										else if (amount<=700) price=115;
+										else price = 105;
+									} else if (fabric=="TK") {
+										if (amount<=99) price=120;
+										else if (amount<=200) price=115;
+										else if (amount<=400) price=105;
+										else if (amount<=600) price=95;
+										else if (amount<=700) price=90;
+										else price = 75;
+									} else if (fabric=="cotton") {
+										alert("ผ้าประเภท cotton สำหรับเสื้อยืดเท่านั้นค่ะ");
+									} else if (fabric=="TC") {
+										alert("ผ้าประเภท TC สำหรับเสื้อโปโล สีอ่อนและสีเข้มราคาไม่เท่ากัน กรุณาเลือกว่าท่านต้องการสีอ่อนหรือสีเข้มด้วยค่ะ");
+									}
 								}
 							}
 							
@@ -199,6 +232,19 @@
 						}
 						
 						calprice();
+						
+						function shirttypechange() {
+							//console.log($("#price-type").val());
+							if ($("#price-type").val()=="tshirt") {
+								$("#price-fabric").removeClass("fabric-polo");
+								$("#price-fabric").addClass("fabric-tshirt");
+								$("#price-fabric").val("cotton");
+							} else if ($("#price-type").val()=="polo") {
+								$("#price-fabric").addClass("fabric-polo");
+								$("#price-fabric").removeClass("fabric-tshirt");
+								$("#price-fabric").val("TCbright");
+							}
+						}
 						
 						setInterval(function() {
 							if (isNaN(parseInt($("#price-amount").val()))) $("#price-amount").val(0);
@@ -240,6 +286,25 @@
 			            </div>
 			            <div class="modal-body">
 			                <img src="im/price2.jpg" style="width:100%; height:100%;">
+			            </div>
+			            <div class="modal-footer">
+			                <button type="button" class="btn btn-primary" data-dismiss="modal">ปิด</button>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			
+			<div id="modal-polo" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			    <div class="modal-dialog modal-lg">
+			        <div class="modal-content">
+			            <div class="modal-header">
+			                <h5 class="modal-title">ราคาเสื้อโปโล</h5>
+			                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			                <span aria-hidden="true">&times;</span>
+			                </button>
+			            </div>
+			            <div class="modal-body">
+			                <img src="im/price4.jpg" style="width:100%; height:100%;">
 			            </div>
 			            <div class="modal-footer">
 			                <button type="button" class="btn btn-primary" data-dismiss="modal">ปิด</button>

@@ -18,6 +18,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
 		
+		<!-- slideshow mobile compat component-->
+		<script src="component/slideshow.js"></script>
+		<link rel="stylesheet" href="component/slideshow.css">
+		
 		<!-- pace.js : loading progress bar -->
 		<script src="js/pace/pace.min.js"></script>
 		<link rel="stylesheet" href="js/pace/pace-theme-flash.css">
@@ -50,8 +54,8 @@
 					<span class="bt1 left">บล็อก</span>
 				</a>
 					<span class="bt1 left">&nbsp;>&nbsp;</span>-->
-				<a href="size.html">
-					<span class="bt1 abt1 left">ขนาดเสื้อ</span>
+				<a href="example.html">
+					<span class="bt1 abt1 left">ผลงานที่ผ่านมา</span>
 				</a>
 			</div>
 			<!-- breadcrumb-wapp -->
@@ -60,11 +64,23 @@
 			</div>
 			<!-- hr -->
 			<div class="toppig">
-				<span class="toptext">ขนาดเสื้อ</span>
+				<span class="toptext">ผลงานที่ผ่านมา</span>
 			</div>
 			<!-- toppig -->
-			<div class="bodypanel" style="padding:0;text-align:center;" id="bodypanel">
-				<div style="width:100%"><img src="im/somsrisize.jpg" id="sizeimg" width="100%"></div>
+			
+			<div class="bodypanel noflexrow" id="bodypanel">
+        		<div id="slideshow"></div>
+                <script>
+                    $("#slideshow").slideshow((function(len){
+                        var res = [];
+                        for(var i = 1;i<=len;i++) {
+                            res.push("im/portfolio/"+i+".jpg");
+                        }
+                        return res;
+                    })(9),1600);
+                </script>
+				<div class="bodytext">สำหรับลูกค้าที่ต้องการดูรายละเอียดและกรรมวิธีการตัดเย็บสกรีน สามารถเข้าไปดูได้ <a href="example.html">ที่นี่</a></div>
+                
 			</div>
 
 		</div>
