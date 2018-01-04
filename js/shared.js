@@ -44,6 +44,15 @@ setInterval(function() {
     }
 },200);
 
+$("document").ready(function() { setTimeout(()=> {
+    //console.log($(this.$el));
+    $("#topmenu").find('li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).fadeIn(100);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).fadeOut(100);
+    });
+},10); });
+
 //fade loading transition use pace.js instead (update fade.css to use pace class selector instead of writing new fucking long js)
 
 //Google analytics
