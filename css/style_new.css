@@ -298,3 +298,21 @@
 		background-position: 0px 75%;
 	}
 }
+
+/* W1img (ทำไมต้องสมศรี) */
+
+.W1img {
+	width: 90%;
+}
+
+@media screen and (min-width:1600px){
+	.W1img {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width:890px){
+	.W1img {
+		width: 800px;
+	}
+}

@@ -168,7 +168,7 @@
     
     .controlconchild .form-control {
         font-size: 12pt;
-        width: 40%;
+        width: 125px;
     }
     
     .bottomtext {
@@ -178,11 +178,44 @@
     .bottomtext2 {
         font-size: 12pt;
     }
+    
+    .controlconchild.controlconcal span {
+        font-size: 16pt;
+    }
 }
 
 @media screen and (max-width:575px) {
     .priceheadbutton {
         top: 45%;
         height: 100px;
+    }
+    
+    .priceheadbutton_label_main {
+        font-size: 16pt;
+    }
+    
+    .priceheadbutton_label_sub {
+        font-size: 13pt;
+    }
+    
+    .controlconchild {
+        font-size: 12pt;
+    }
+    
+    .controlconchild .form-control {
+        font-size: 11pt;
+        width: 100px;
+    }
+    
+    .bottomtext {
+        font-size: 12pt;
+    }
+    
+    .bottomtext2 {
+        font-size: 11pt;
+    }
+    
+    .controlconchild.controlconcal span {
+        font-size: 14pt;
     }
 }
