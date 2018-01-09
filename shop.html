@@ -244,8 +244,8 @@
 		</script>
 		
 		<script>
-			var fcanvas = new fabric.Canvas('frontcanvas', { preserveObjectStacking: true }); //preserveObjectStacking disable go to top when selected
-			var bcanvas = new fabric.Canvas('backcanvas', { preserveObjectStacking: true });
+			var fcanvas = new fabric.Canvas('frontcanvas', { preserveObjectStacking: true,allowTouchScrolling: true }); //preserveObjectStacking disable go to top when selected
+			var bcanvas = new fabric.Canvas('backcanvas', { preserveObjectStacking: true,allowTouchScrolling: true });
 			var canvas = fcanvas;
 			var currid = 1;
 			var currcontrol = 0;

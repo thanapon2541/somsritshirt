@@ -44,7 +44,7 @@ setInterval(function() {
     }
 },200);
 
-$("document").ready(function() { setTimeout(()=> {
+$("document").ready(function() { setTimeout(function() {
     //console.log($(this.$el));
     $("#topmenu").find('li.dropdown').hover(function() {
         $(this).find('.dropdown-menu').stop(true, true).fadeIn(100);
@@ -61,7 +61,7 @@ $("document").ready(function() { setTimeout(()=> {
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-//gotjar analytics
+//hotjar analytics
 (function(h,o,t,j,a,r){
     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
     h._hjSettings={hjid:734867,hjsv:6};

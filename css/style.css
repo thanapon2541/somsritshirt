@@ -240,6 +240,12 @@ footer{
 .banner2-wapp .wappp {
 	width: 100%;
 }
+.headertext {
+	text-align: center;
+	font-size: 14pt;
+	margin-bottom: 10px;
+	padding-top:10px;
+}
 @media screen and (min-width:375px) {
 	.logoim{
 		margin-left: 28px;
@@ -268,6 +274,25 @@ footer{
 	}*/
 	.con1 {
     	background-size: 155%;
+	}
+	
+	.wapppindexhead {
+		padding-top: 10px;
+	}
+	
+	.headertext {
+		font-size: 15pt;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (min-width:475px) {
+	.headertext {
+		font-size: 17pt;
+	}
+}
+@media screen and (min-width:550px) {
+	.headertext {
+		font-size: 20pt;
 	}
 }
 @media screen and (min-width:768px) and (orientation: landscape) {
@@ -311,7 +336,7 @@ footer{
 	}
 	.banner2-wapp{
 		padding-bottom: 20px;
-		padding-top: 20px;
+		/*padding-top: 20px;*/
 	}
 	.ba2 {
     	height: 388px;
@@ -354,6 +379,9 @@ footer{
     	font-size: 1.2em;
     	line-height: 56px;
 	}*/
+	.headertext {
+		font-size: 24pt;
+	}
 }
 @media screen and (min-width:1024px) and (orientation: landscape) {
 	.wappp{
@@ -406,14 +434,15 @@ footer{
 	}
 	.banner2-wapp{
 		padding-bottom: 50px;
-		padding-top: 50px;
+		/*padding-top: 50px;*/
+		
 	}
 	.ba2{
 		height: 600px;
 	}
 	.ba2txet{
 	    border: 4px solid #fff;
-	    margin-top: 411px;
+	    margin-top: 440px;
 	    margin-left: 6%;
 	    width: 148px;
 	    padding: 1%;
@@ -468,6 +497,12 @@ footer{
 	}
 	.banner2-wapp .wappp {
 		width: 70%;
+	}
+	.wappp.wapppindexhead {
+		width: 90%;
+	}
+	.headertext {
+		font-size: 28pt;
 	}
 }
 @media screen and (min-width:1400px) and (orientation: landscape) {
