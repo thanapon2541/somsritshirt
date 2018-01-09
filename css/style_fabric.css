@@ -37,6 +37,10 @@
     margin-top: 0;
 }
 
+@media screen and (max-width:1040px){
+    
+}
+
 @media screen and (max-width:1000px){
     .bodyflex {
         flex-direction: column !important;
