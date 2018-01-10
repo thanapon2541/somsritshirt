@@ -246,6 +246,38 @@ footer{
 	margin-bottom: 10px;
 	padding-top:10px;
 }
+#description-block{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin:20px;
+	margin-bottom: 0px;
+}
+.des {
+	font-size: 16pt;
+	line-height: 30px;
+}
+.rightdes {
+	max-width: 50%;
+}
+
+@media screen and (max-width:991px) {
+	#description-block {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.rightdes {
+		max-width: 100%;
+		margin-top: 15px;
+	}
+}
+@media screen and (max-width:767px) {
+	.des {
+		font-size: 14pt;
+		line-height: 26px;
+	}
+}
+
 @media screen and (min-width:375px) {
 	.logoim{
 		margin-left: 28px;
