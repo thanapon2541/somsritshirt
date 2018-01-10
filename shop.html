@@ -209,8 +209,10 @@
 							    <a class="nav-link normal-a" id="canvas-back-button" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="false">ด้านหลัง</a>
 							  </li>
 							</ul>
-							<canvas id="frontcanvas"></canvas>
-							<canvas id="backcanvas"></canvas>
+							<center>
+								<canvas id="frontcanvas"></canvas>
+								<canvas id="backcanvas"></canvas>
+							</center>
 							<button id="text-tab-submit" type="button" class="btn btn-primary" onclick="doexport();">Save</button>
 						</div>
 					</div>
@@ -253,14 +255,23 @@
 			var selectedval;
 			
 			function resizecanvas() {
-				fcanvas.setWidth($("#canvas-wrap").width());
-				fcanvas.setHeight($("#canvas-wrap").width()*592/511);
+				var width = $("#canvas-wrap").width();
+				var zoomlv = 1;
+				if (width<500) {
+					zoomlv = width/500;
+				} else {
+					width = 500;
+				}
+				fcanvas.setWidth(width);
+				fcanvas.setHeight(width*592/511);
+				fcanvas.setZoom(zoomlv);
 				fcanvas.selection = false;
 				fcanvas.calcOffset();
 				
-				bcanvas.setWidth($("#canvas-wrap").width());
-				bcanvas.setHeight($("#canvas-wrap").width()*592/511);
+				bcanvas.setWidth(width);
+				bcanvas.setHeight(width*592/511);
 				bcanvas.selection = false;
+				bcanvas.setZoom(zoomlv);
 				bcanvas.calcOffset();
 				
 				$(".fabricimg").width(fcanvas.getWidth());

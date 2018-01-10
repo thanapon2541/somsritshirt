@@ -368,8 +368,20 @@
 	}
 }
 
-@media screen and (max-width: 1034px) {
+@media screen and (max-width: 1040px) {
 	.wappp {
 		width:100%;
+	}
+	
+	.panelbody {
+		flex-direction: column;
+	}
+	
+	#control-wrap, #canvas-wrap {
+		width: 100%;
+	}
+	
+	#control-wrap {
+		margin-bottom: 20px;
 	}
 }
