@@ -252,7 +252,7 @@ footer{
 }
 #description-block{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	margin:20px;
 	margin-bottom: 0px;
