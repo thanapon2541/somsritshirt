@@ -71,6 +71,11 @@ font:active {
 					}
 				}, 10);
 			});
+			
+			//enable tooltip everywhere
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip()
+			});
 		</script>
 		
 		<!--<div class="menu-wapp clearfix">
@@ -180,13 +185,30 @@ font:active {
 						<!-- bannercontact_l -->
 						<div class="bannercontact_r right">
 							<a target="_blank" href="https://www.facebook.com/somsritshirt/?__mref=message_bubble">
-								<div class="icban icb1"></div>
+								<div class="icban icb1" data-toggle="tooltip" data-placement="top" title="@somsritshirt"></div>
 							</a>
 							<a target="_blank" href="https://line.me/R/ti/p/%40diz8986o">
-								<div class="icban icb2"></div>
+								<div class="icban icb2" data-toggle="tooltip" data-placement="top" title="@somsritshirt"></div>
+							</a>
+							<a id="banner-telbutton" href="tel:0851946521">
+								<div class="icban icb3" data-toggle="tooltip" data-placement="top" title="085-194-6521"></div>
 							</a>
 						</div>
 						<!-- bannercontact_r -->
+						
+						<!--tel modal-->
+						
+						
+						<script>
+							$(document).ready(function(){setTimeout(function() {
+								if (!isMobile) {
+									$("#banner-telbutton").attr("href","#");
+									$("#banner-telbutton").click(function(e) {
+										e.preventDefault();
+									});
+								}
+							}),10});
+						</script>
 					</div>
 					<!-- bannercontact -->
 				</div>

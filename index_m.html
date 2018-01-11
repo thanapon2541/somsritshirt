@@ -157,7 +157,8 @@ font:active {
 		<div id="vue-wrap">
 
 			<div class="banner2-wapp clearfix">
-				<div class="wappp">
+				<div class="wappp wapppindexhead">
+					<div class="headertext">ผลิต สกรีน ปัก ออกแบบ เสื้อยืด เสื้อโปโล </div>
 					<div class="ba2">
 						<a href="shop.html">
 							<div class="ba2txet">
@@ -165,8 +166,56 @@ font:active {
 							</div>
 						</a>
 					</div>
+					
+					<div class="bannercontact">
+						<div class="bannercontact_l left">
+							<span class="bannercontact_t1">ติดตามสมศรีได้ที่</span>
+							<br>
+							<span class="bannercontact_t2">LET'S FOLLOW US</span>
+						</div>
+						<!-- bannercontact_l -->
+						<div class="bannercontact_r right">
+							<a target="_blank" href="https://www.facebook.com/somsritshirt/?__mref=message_bubble">
+								<div class="icban icb1" data-toggle="tooltip" data-placement="top" title="@somsritshirt"></div>
+							</a>
+							<a target="_blank" href="https://line.me/R/ti/p/%40diz8986o">
+								<div class="icban icb2" data-toggle="tooltip" data-placement="top" title="@somsritshirt"></div>
+							</a>
+							<a id="banner-telbutton" href="tel:0851946521">
+								<div class="icban icb3" data-toggle="tooltip" data-placement="top" title="085-194-6521"></div>
+							</a>
+						</div>
+						<!-- bannercontact_r -->
+						
+						<!--tel modal-->
+						
+						
+						<script>
+							$(document).ready(function(){setTimeout(function() {
+								if (!isMobile) {
+									$("#banner-telbutton").attr("href","#");
+									$("#banner-telbutton").click(function(e) {
+										e.preventDefault();
+									});
+								}
+							}),10});
+						</script>
+					</div>
+					<!-- bannercontact -->
 				</div>
 				<!-- wappp -->
+			</div>
+			
+			<div id="description-block">
+				<div class="leftdes">
+					<img src="im/somlogoleft.png" height="60px"><br>
+					<span class="des">สวมใส่ทุกๆเรื่องราวความประทับใจของคุณ</span>
+				</div>
+				<div class="rightdes">
+					<span class="des">
+						สมศรีมีเสื้อ รับผลิตเสื้อ  สกรีนเสื้อ ปักเสื้อ และออกแบบเสื้อ ที่ตอบสนองความต้องการของลูกค้าได้อย่างสูงสุด ด้วยราคาถูก  ทั้ง เสื้อโปโล เสื้อยืด โดยเราถือคติว่า  <u><b>“เราไม่ได้ทำธุรกิจเสื้อ แต่เราทำธุรกิจบริการ ผ่านเสื้อ”</b></u> และการสกรีน ที่จะมอบความบริการเหนือสิ่งอื่นใด ให้ลูกค้าที่สั่ง ผลิตเสื้อ หรือสกรีนเสื้อกับเรา ให้มีความพึงพอใจอย่างสูงสุด 
+					</span>
+				</div>
 			</div>
 			
 			<center>
@@ -278,10 +327,10 @@ font:active {
 	
 			<div id="garuntee" class="clearfix">
 				<div class="garuntee-flex">
-					<img src="im/G1.jpg">
-					<img src="im/G2.jpg">
-					<img src="im/G3.jpg">
-					<img src="im/G4.jpg">
+					<img src="im/G1.jpg" onclick="window.location='why.html';">
+					<img src="im/G2.jpg" onclick="window.location='why.html';">
+					<img src="im/G3.jpg" onclick="window.location='why.html';">
+					<img src="im/G4.jpg" onclick="window.location='why.html';">
 				</div>
 				<script>
 					

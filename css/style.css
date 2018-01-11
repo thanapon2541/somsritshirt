@@ -105,6 +105,10 @@ ul,li{
 	background-image: url(../im/line.png);
     background-size: 50px;
 }
+.icb3{
+	background-image: url(../im/phone-call.png);
+    background-size: 50px;
+}
 .icban:hover{
 	background-color: #5F7FE7;
 }
@@ -265,6 +269,9 @@ footer{
 	#description-block {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+	.leftdes {
+		width: 100%;
 	}
 	.rightdes {
 		max-width: 100%;
@@ -462,6 +469,9 @@ footer{
 	    background-size: 71px;
 	}
 	.icb2{
+	    background-size: 71px;
+	}
+	.icb3{
 	    background-size: 71px;
 	}
 	.banner2-wapp{
