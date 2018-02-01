@@ -109,8 +109,9 @@
     background-color: gold;
     text-decoration: none;
     border: none;
-    padding: 7px;
+    padding: 20px;
     font-family: promptmedium;
+    font-size: 20pt;
 }
 
 .controlconchild.controlconcal button:hover {
@@ -140,6 +141,11 @@
     
     .bottomtext2 {
         font-size: 14pt;
+    }
+    
+    .controlconchild.controlconcal button {
+        padding: 15px;
+        font-size: 18pt;
     }
 }
 
@@ -182,6 +188,11 @@
     .controlconchild.controlconcal span {
         font-size: 16pt;
     }
+    
+    .controlconchild.controlconcal button {
+        padding: 15px;
+        font-size: 16pt;
+    }
 }
 
 @media screen and (max-width:575px) {
@@ -217,5 +228,10 @@
     
     .controlconchild.controlconcal span {
         font-size: 14pt;
+    }
+    
+    .controlconchild.controlconcal button {
+        padding: 10px;
+        font-size: 16pt;
     }
 }

@@ -12,57 +12,52 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/index.html</loc>
-  <lastmod>2018-01-02T09:09:53+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://somsritshirt.com/shop.html</loc>
+  <loc>http://somsritshirt.com/shop</loc>
   <lastmod>2018-01-02T09:09:53+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/portfolio.html</loc>
+  <loc>http://somsritshirt.com/portfolio</loc>
   <lastmod>2018-01-02T09:09:53+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/price.html</loc>
+  <loc>http://somsritshirt.com/price</loc>
   <lastmod>2018-01-02T09:09:53+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/size.html</loc>
+  <loc>http://somsritshirt.com/size</loc>
   <lastmod>2018-01-02T09:09:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/faq.html</loc>
+  <loc>http://somsritshirt.com/faq</loc>
   <lastmod>2018-01-02T09:09:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/fabric.html</loc>
+  <loc>http://somsritshirt.com/fabric</loc>
   <lastmod>2018-01-02T09:09:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/why.html</loc>
+  <loc>http://somsritshirt.com/why</loc>
   <lastmod>2018-01-02T09:09:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/example.html</loc>
+  <loc>http://somsritshirt.com/example</loc>
   <lastmod>2018-01-02T09:09:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/about.html</loc>
+  <loc>http://somsritshirt.com/about</loc>
   <lastmod>2018-01-02T09:09:52+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>http://somsritshirt.com/contact.html</loc>
+  <loc>http://somsritshirt.com/contact</loc>
   <lastmod>2018-01-02T09:09:52+00:00</lastmod>
   <priority>0.90</priority>
 </url>
