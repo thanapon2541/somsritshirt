@@ -11,22 +11,22 @@ Vue.component('topmenu',{
                 </ul>
                 <ul class="navbar-nav my-2 my-lg-0">
                     <li class="nav-item"> <a class="nav-link" href="shop">ออกแบบเสื้อ</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="portfolio.html">ผลงานที่ผ่านมา</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="price.html">ราคา</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="portfolio">ผลงานที่ผ่านมา</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="price">ราคา</a> </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> รายละเอียด </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="size.html">ขนาดเสื้อ</a>
-                            <a class="dropdown-item" href="faq.html">คำถามที่พบบ่อย</a>
-                            <a class="dropdown-item" href="fabric.html">เนื้อผ้า</a>
-                            <a class="dropdown-item" href="why.html">ทำไมต้องเลือกเรา?</a>
-                            <a class="dropdown-item" href="example.html">ตัวอย่างเสื้อ</a>
+                            <a class="dropdown-item" href="size">ขนาดเสื้อ</a>
+                            <a class="dropdown-item" href="faq">คำถามที่พบบ่อย</a>
+                            <a class="dropdown-item" href="fabric">เนื้อผ้า</a>
+                            <a class="dropdown-item" href="why">ทำไมต้องเลือกเรา?</a>
+                            <a class="dropdown-item" href="example">ตัวอย่างเสื้อ</a>
                             <!--<div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>-->
                         </div>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="about.html">เกี่ยวกับเรา</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="contact.html">ติดต่อสมศรี</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="about">เกี่ยวกับเรา</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="contact">ติดต่อสมศรี</a> </li>
                 </ul>
             </div>
         </nav>

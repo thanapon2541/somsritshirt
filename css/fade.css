@@ -8,14 +8,16 @@
 
 .pace::before { /*inject new style to pseudo element*/
 	content: ""; /*create pseudo element (before,after) require this*/
-	position : fixed;
-	top:0px;
-	bottom:0;
-	width:100%;
-	height:100%;
+	
+    position: fixed;
+    z-index: 1999;
+    top: 0;
+    left: 0;
+    width: 100%;
+	height: 100%;
+	
 	background-color: black;
 	opacity:0.75;
-	z-index:1750;
 	/*display: none;*/
 	/*transition: opacity 0.4s linear;*/
 }
